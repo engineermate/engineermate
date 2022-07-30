@@ -1,0 +1,711 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="../../StyleSheet.css" />
+<title>EM-TI-86 Calculator - General Calculation</title>
+    <style type="text/css">
+        .style1
+        {
+            font-family: "Courier New";
+        }
+        .style2
+        {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>			
+
+	<div id="container">
+	<div class="Manual" style="width:740px; list-style-position: inside;">
+
+<h1>Chapter 3 	 Hydraulic Calculations</h1>    
+<h2>3.0  	Main Menu and Sub-Menus</h2> 
+<p>Choose <em>3-Hydraulic</em> from manu shown on Fig. 0.3-3 for hydraulic calculations.</p>
+<table>         
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    ?&#9632;1-Gravity<br />
+                    &nbsp; 2-Pressure<br />
+                    &nbsp;&nbsp;3-CWdemand<br />
+                    &nbsp; 4-Pump-HP<br />
+                    &nbsp; 5-MeasurQ <br />
+                    &nbsp;&nbsp;6-Calcult<br />
+                    &nbsp; 7-Exit<br />
+                    <br />
+                 </div>
+                 
+                         
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>A. The hydraulic calculation main menu</b> (Fig.3.0-1).</div>
+             </td>           
+        </tr>         
+        <tr><td>Fig. 3.0-1 Hydraulic Calc Main menu</td></tr>
+</table> 
+
+<h2>3.1 Gravity Piping/Channel</h2>  
+<h3>3.1.1 Piping</h3>      
+<table> 
+        <col width="180px"/>
+        <col width="400px"/>           
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    ?&#9632;1-Circular pipe<br />
+                    &nbsp; 2-Trapez channel<br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                        </div>
+                 
+                         
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>B. Select 1 and return</b> form Fig.3.0-1 to bring the Gravity flow calculations. 
+                    (See Fig.3.1-1).<br />
+                    <br />
+                    Enter 1 from Fig.3.1-1 to calculate cirlular piping.</div>
+             </td>           
+        </tr> 
+        <tr><td>Fig. 3.1-1 Pipe or Open chanel</td></tr>                
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    DIA=(in)6<br />
+                    Len=(ft)100<br />
+                    h/D=0.5<br />
+                    Slope=0.005<br />
+                    &nbsp;&nbsp;&nbsp; n=0.013<br />
+                    <br />
+                    <br />
+                        </div>
+                 
+                         
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>C. Enter diameter (DIA)</b>: 6 inch<br />
+                    pipe length (Len): 100 ft<br />
+                    water depth and diameter ratio (h/D): 0.5<br />
+                    slope: 0.005<br />
+                    Manning's coefficient: 0.013</div>
+             </td>           
+        </tr>
+        <tr><td>Fig. 3.1-2 Input Data</td></tr>        
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    D/h(in) 6.00&nbsp; 3.00<br />
+                    hf/Hf(ft).00500 .50<br />
+                    WP(ft)/T .79&nbsp;&nbsp; 180.00<br />
+                    WA/WL(sf/ft).10&nbsp; .50<br />
+                    RH=(ft)&nbsp; .13<br />
+                    V=(fps)&nbsp; 2.02<br />
+                    cfs/gpm&nbsp; .20&nbsp;&nbsp; 89<br />
+                    SUBCRITIC, Fr= .80
+               </div>
+                         
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>D. The results:</b><br />
+                    D/h(in) - diameter=6.00 / water depth=3.00<br />
+                    hf/Hf&nbsp;&nbsp; - slope=0.00500 / elevation drop=0.50 ft
+                    <img class="img"   alt="Pipe Section" src="pics/HydElements.JPG" style="width: 241px; height: 125px" /><br />
+                    WP(ft/T - wetted perephere=0.79 ft / center to surface angle=180 degree<br />
+                    WA/WL(sf/ft) - wetted area=0.10 sf / water surface width=0.50ft<br />
+                    V=(fps) - velocity=2.02 fps<br />
+                    cfs/gpm - flowrate=0.20 cfs, or =89 gpm<br />
+                    flow is subcritic and Froude Number Fr=0.80.
+                 </div>
+             </td>           
+        </tr> 
+        <tr><td>Fig. 3.1-3 Gravirty Pipe Calculation Results</td></tr>               
+</table>     
+<h3>3.1.2 Trapez Channel</h3>      
+<table> 
+        <col width="180px"/>
+        <col width="400px"/>           
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    BotW-ft:10<br />
+                    Deep-ft:5<br />
+                    SideSlp:999<br />
+                    &nbsp; Slope:0.005<br />
+                    Rough,n:0.013<br />
+                    <br />
+                    <br />
+                    <br />
+                        </div>
+                         
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>E. Enter data:</b><br />
+                    bottom width, BotW=10ft<br />
+                    water depth, Deep=5ft<br />
+                    SideSlope=Depth/(Water surface width - bottom width)/2<br />
+                    Note: The side slopes of both sides are equal in this calculation.<br />
+                    SideSlope=999(very steep to resemble a rectangular channel)<br />
+                    Channel longtitude or profile Slope=0.005<br />
+                    Manning's roughness=0.013<br />
+                        </div>
+             </td>           
+        </tr>
+        <tr><td>Fig. 3.1-4 Input Data</td></tr>        
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    TrapesChannelDesign<br />
+                    B/h-ft:&nbsp; 10.00 5.00<br />
+                    &nbsp;WA/WP:&nbsp; 50.00 20.00
+                    <br />
+                    &nbsp;&nbsp;RH/n:&nbsp; 2.50&nbsp; .013<br />
+                    sSp/Sp:&nbsp; 999.00 .0050<br />
+                    V-ft/S: 14.89<br />
+                    cfs/m3s 745.1&nbsp; 21.10
+                    <br />
+                    SUPERCRITIC, Fr= 1.17</div>
+                           
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>F. The results:</b><br />
+                    B/h-ft: bottom=10ft;&nbsp; water depth=5ft;<br />
+                    WA/WP:&nbsp; wetted area=50sft; wetted perephere=20.00ft<br />
+                    RH: hydraulic radius=2.50ft<br />
+                    n: Manning's roughness=0.013<br />
+                    sSP/Sp: side slope=999 (rectangular channel); slope=0.005<br />
+                    V-ft/S: velocity=14.89ft/s<br />
+                    cfs/m3s: flow=745.1cft/s or 21.10m<sup><span class="style1">3</span></sup>/s<br />
+                    The flow is supercritical becauce the Froude number is 1.17 (&gt;1) </div>
+             </td>           
+        </tr>
+        <tr><td>Fig. 3.1-5 Trapez Channel Calculation Results</td></tr>                
+</table>         
+        
+<h2>3.2 Pressure Piping</h2>  
+<p>Select 2 from Hydraulic menu and RETURN to bring up the input screen.</p>      
+<table> 
+        <col width="180px"/>
+        <col width="400px"/>           
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    DIA=(in)6<br />
+                    Len=(ft)100<br />
+                    H/W C=120<br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                        </div>
+                 
+                         
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>B. Enter pipe data.</b> 
+                    (See Fig.3.2-1).<br />
+                    <br />
+                    RETURN to bring next screen (Fig.3.2-2).</div>
+             </td>           
+        </tr> 
+        <tr><td>Fig. 3.2-1 Enter Pipe Data</td></tr>       
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    ?1&#9632;<br />
+                    <br />
+                    <br />
+                    1-So-Q<br />
+                    2-Q-So<br />
+                    <br />
+                    <br />
+                    <br />
+                        </div>
+                 
+                         
+             </td>
+             
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>C. Select 1</b> to calculate flow rate (Q) based on slope, i.e. friction loss per 
+                    unit length of pipe (So) available.<br />
+                    Select 2 to calculate friction loss per unit length (So) based on flow (Q) 
+                    required.<br />
+                    <br />
+                    Refer to Fig.3.2-2</div>
+             </td>           
+        </tr>
+        <tr><td>Fig. 3.2-2 Input Data</td></tr>        
+  </table>      
+  <h3>3.2.1 Calculate flowrate from available friction loss</h3>                
+  <table>         
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    ?1<br />
+                    Slope=0.01&#9632;<br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                        </div>
+                 
+                        
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>D. Enter slope (So)</b>. Refer to Fig.3.2-3</div>
+             </td>           
+        </tr> 
+        <tr><td>Fig. 3.2-3 Enter Slope</h4> </td></tr>        
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    D(in)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.00<br />
+                    hf(ft/ft)&nbsp; .0100<br />
+                    Hf(ft)&nbsp;&nbsp;&nbsp;&nbsp; 1.00<br />
+                    V(fps)&nbsp;&nbsp;&nbsp;&nbsp; 3.55<br />
+                    cfs/gpm&nbsp;&nbsp;&nbsp; .70&nbsp;&nbsp; 313<br />
+                    <br />
+                    <br />
+                    <br />
+                        </div>
+                 
+                         
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>E. Results</b> are shown on Fig.3.2-4</div>
+             </td>           
+        </tr>                 
+        <tr><td>Fig. 3.2-4 Results</td></tr>               
+</table>         
+<h3>3.2.2 Calculate friction loss from required flow rate</h3>                
+<table>         
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    ?2<br />
+                    Q=(gpm)313<br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                        </div>
+                 
+                         
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>F. Enter</b> flow rate (Q). Refer to Fig.3.2-5</div>
+             </td>           
+        </tr>
+        <tr><td>Fig. 3.2-5 Enter Flowrate</td></tr>         
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    D(in)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.00<br />
+                    hf(ft/ft)&nbsp; .01001<br />
+                    Hf(ft)&nbsp;&nbsp;&nbsp;&nbsp; 1.00<br />
+                    V(fps)&nbsp;&nbsp;&nbsp;&nbsp; 3.55<br />
+                    cfs/gpm&nbsp;&nbsp;&nbsp; .70&nbsp;&nbsp; 313<br />
+                    <br />
+                    <br />
+                    <br />
+                        </div>
+                 
+                         
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>G. Results</b> are shown on Fig.3.2-6.<br />
+                    Note: The results are almost the same as that on Fig.3.2-4 except hf (or So), 
+                    which is 0.01001, because of the round up reason during calculation.</div>
+             </td>           
+        </tr>                 
+        <tr><td>Fig. 3.2-6 Results</td></tr>               
+</table>  
+
+<h2>3.3 Cold/City Water Demand</h2>  
+<p>Select <i>3, CWdemandand,</i> on Fig.3.0.1 to bring the Cold/City Water Demand screen.</p>              
+<table>         
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    Polulat:100000<br />
+                    gpd/cap:<br />
+                    &nbsp;Rmaxhr:2<br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                        </div>
+                 
+                        
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    
+                    <b>A. Enter:</b><br />
+                    Population (Populat)<br />
+                    Water consumption (gallon per day per capita (gpd/cap)<br />                    
+                    Hourly peak demand factor (R)<br />  
+                    See Fig.3.3-1<br />                                        
+                    </div>
+             </td>           
+        </tr>
+        <tr><td>Fig. 3.3-1 Enter Data</h4> </td></tr>         
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    Data for CITY MAIN on<br />
+                    Qd=(gpm)&nbsp;17361<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp; R=&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;34722<br />
+                    Qf(gpm)= 9180<br />
+                    &nbsp;Q(gpm)= 43902<br />
+&nbsp;R-Qmax/Qavg(hrly)<br />
+                    Qd-Domstc Qf-Fire<br />
+&nbsp;Q-Total(=Qd*R+Qf)<br />
+                    <br />
+                    <br />
+                    <br />
+                        </div>
+                 
+                         
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>B. Output and notes:</b>
+                    <br />
+                    R = Qhourly maximum / Qhourly average.
+                    
+                    <br />
+                    Qtotal = Total maximum hourly demand.
+                    
+                    
+                </div>
+             </td>           
+        </tr>                 
+        <tr><td>Fig. 3.3-2 Results & Notes</td></tr>              
+</table>  
+
+<h2>3.4 Pump Horse Power and Affinity Laws</h2>  
+<p>Select <i>4, Pump-HP,</i> on Fig.3.0.1 to bring the Pump Horse Power screen.</p>              
+<table>         
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    Q(gpm): 750<br />
+                    Hd(ft): 200<br />
+                     &nbsp;
+                     E(%): 65 <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                        </div>
+                 
+                        
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    
+                    <b>A. Enter:</b><br />
+                    Enter data as on Fig.3.4-1:<br />   
+                    Flow Q=750 gpm<br />                     
+                    Boost head Hd=200 ft<br />   
+                    Pump efficiency E=65%<br />                     
+                    
+                                                         
+                </div>
+             </td>           
+        </tr>
+        <tr><td>Fig. 3.4-1 Enter Data</h4> </td></tr>         
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    <br />
+                    <br />
+                    &nbsp;&nbsp;
+                    HP:  58.30<br />
+                    <br />
+                    Affinity Law:<br />
+                    q/Q=n/N=d/D<br />
+                    h/H=(n/N)^2=(d/D)^2<br />
+                    p/P=(n/N)^3=(d/D)^3<br />
+               </div>
+                 
+                         
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>B. Output and notes:</b>
+                    <br />
+                    HP = 58.30<br />
+                    <br />                    
+                    The Affinity Laws follow:<br /> 
+                    q and Q - flow before and after;<br /> 
+                    n and N - revolutions before and after;<br /> 
+                    d and d - diameter of impeller before and after;<br /> 
+                    p and P - pump power required before and after.<br /> 
+                    <br /> 
+                </div>
+             </td>           
+        </tr>                 
+        <tr><td>Fig. 3.4-2 Results & Notes</td></tr>               
+</table> 
+<h2>3.5 Flow Measurement</h2>  
+<p>Select <i>5, MeasureQ,</i> on Fig.3.0.1 to bring the Flow Measurement screen 
+    (Fig.3.5-0).</p>              
+<table>         
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    Select 1-4:&#9632;<br />
+                    <br />
+                    &nbsp;&nbsp;
+                    1-Orifice<br />
+                    &nbsp;&nbsp;
+                    2-Venturi<br />
+                    &nbsp;&nbsp;
+                    3-Weir<br />
+                    &nbsp;&nbsp;
+                    4-Exit<br />
+                    <br />
+                    <br />
+                        </div>
+                 
+                         
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    
+                    See Figure on left.</div>
+             </td>           
+        </tr> 
+        <tr><td>Fig. 3.5-0 Enter Data</td></tr>        
+</table>                                                      
+  <h3>3.5.1 Using Orifice</h3> 
+  <p>Select <i>1-Orifice</i> from Fig.3.5-0 to bring the input screen.</p>               
+  <table>         
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    Orifice Dia(in)1<br />
+                    Avail. Head(ft)100&#9632;<br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                        </div>
+                 
+                       
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>A. Enter: </b><br />
+                    Orifice diameter in inch<br />
+                    Available head in foot<br />                    
+                    (See Fig.3.5.1-1 on left).<br />
+                    <br />
+                    <span class="style2">Note</span>: Available head is reffered to the head 
+                    available upstream of the orifice while the free head after the orifice is zero.</div>
+             </td>           
+        </tr> 
+        <tr><td> <h4>Fig. 3.5.1-1 Input</h4> </td></tr>        
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    <br />
+                    <br />
+                    <br />
+                    <br />                
+                    cfs/gpm:&nbsp;&nbsp;.26&nbsp;&nbsp; 118<br />
+                    <br />
+                    <br />
+                    <br />
+
+                </div>
+                 
+                         
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>B. Results</b> are shown on Fig.3.5.1-2</div>
+             </td>           
+        </tr>                 
+        <tr><td>Fig. 3.5.1-2 Results</td></tr>               
+</table>  
+  <h3>3.5.2 Using Venturi Tube</h3>   
+  <p>Select <i>2-Venturi</i> from Fig.3.5-0 to bring the input screen.</p>                
+  <table>         
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    UpStrmP1(psi):50<br />
+                    ThroatP2(psi):40<br />
+                    UpstrmZ1(in):0<br />
+                    ThroatZ2:0<br />
+                    UpStrmD1:3<br />
+                    ThroatD2:2<br />
+                    <br />
+                    <br />
+                    <br />
+
+                 </div>
+                 
+                         
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>A. Enter: </b><br />
+                    Up stream pressure in psi;<br />
+                    Throat pressure in psi;<br />
+                    Up stream elevation in inch;<br />
+                    Throat elevation in inch;<br />
+                    Up stream pipe diameter in inch;<br />
+                    Throat diameter in inch.<br />
+               </div>
+             </td>           
+        </tr>
+        <tr><td>Fig. 3.5.2-1 Input</td></tr>         
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    <br />
+                    <br />
+                    <br />
+                    <br />                
+                    cfs/gpm:&nbsp;&nbsp;.94&nbsp;&nbsp; 422<br />
+                    <br />
+                    <br />
+                    <br />
+
+                </div>
+                 
+                         
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>B. Results</b> are shown on Fig.3.5.2-2</div>
+             </td>           
+        </tr>                 
+        <tr><td>Fig. 3.5.2-2 Results</td></tr>               
+</table>  
+  <h3>3.5.3 Using Weir</h3>  
+  <p>Select <i>3-Weir</i> from Fig.3.5-0 to bring the input screen.</p>                 
+  <table> 
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    Select 1 or 2&#9632;<br />
+                    <br />
+                    <br />                    
+                    1-Triangular<br />
+                    2-Rectangulr<br />
+                    <br />
+                    <br />
+                    <br />
+
+                </div>
+                 
+                   
+   
+             </td>
+              
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>A. Select type of weirs: </b><br />
+                    Select 1 for triangular weir and <br />
+                    select 2 for rectangular weir.<br />
+               </div>
+             </td>           
+        </tr> 
+        <tr><td>Fig. 3.5.3-0 Weir Selection</td></tr>       
+  </table> 
+                 <h4>Using Triangular Weir</h4>                   
+  <table>                   
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    Head(in):12.00<br />
+                    <br />
+                    <br />                    
+                    cfs: 2.52<br />
+                    gpm: 1131<br />                    
+                    <br />
+
+                </div>
+                 
+                         
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>B. Using triangular weir: </b><br />
+                    Select 1 from Fig.3.5.3-0 and enter data:<br />
+                    Head = 12in.<br />
+                    The flow will be 2.52 cfs or 1131 gpm as shown on Fig.3.5.3-1.<br />
+                </div>
+             </td>           
+        </tr> 
+        <tr><td>Fig. 3.5.3-1 Triangular Weir I/O</td></tr>        
+        <tr>
+            <td>                        
+                <div class="TIscreen">
+                    Head,in:12.00<br />
+                    Wdth,ft: 2<br />
+                    <br />                    
+                    cfs: 6.74<br />
+                    gpm: 3024<br />                    
+                    ForContrSec Weir:<br />
+                    cfs: 6.06<br />
+                    gpm: 2722<br /> 
+                </div>
+                 
+                         
+             </td>
+             <td rowspan="2">                        
+                <div class="TIscreenExp">
+                    <b>C. Using rectangular weir: </b><br />
+                    Select 2 from Fig.3.5.3-0 and enter data:<br />
+                    If enter the water depth above the bottom point as 12 inch,<br />
+                    and the weir width as 2 ft, the flow will be 6.74 cfs, or 3024 gpm. (See 
+                    Fig.3.5.3-2).</div>
+             </td>           
+        </tr>                 
+        <tr><td>Fig. 3.5.3-2 Rectangular Weir I/O</td></tr>               
+</table>  
+<h2>3.6 Misc. Calculations</h2>  
+<p>Refer to Chapter, General Calculations </p>
+
+<h2>3.7 Exit</h2>  
+                                     
+
+	        <div style="float:right;"><a href="Ad-TI02.htm">Previous Page</a> | <a href="Ad-TI04.htm">Next Page</a> | <a href="Ad-TI00.htm">1st Page</a> </div> 
+		</div>	        		
+    </div>
+</body>
+</html>
+

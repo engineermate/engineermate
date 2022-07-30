@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>HWR</title>
+	
+	<script type="text/javascript" src="HWRSI.js"></script>
+    <link href="../../StyleSheetSI.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        td {text-align:center;}
+    </style>
+    </head>
+<body>
+    <div id="container">
+    <div id="header">     	
+        <ul class="nav">
+  		    <li><a href="../../Reference/Contact.htm" target="_blank">Contact</a></li>
+  		    <li><a href="../../Reference/Products.htm" runat="server">Products</a></li>
+  		    <li><a href="../../Reference/Services.htm" runat="server">Services</a></li>
+  		    <li><a href="../../Reference/About.htm" target="HTMLPage"onclick="getAbout()">About Us</a></li>
+  		    <li><a id="A1" href="../../indexSI.htm" runat="server">Home</a></li>		  		
+	    </ul>
+        <div><img src="../../headerdesign.jpg" alt="工程师之友" /></div></div>
+    <div id="leftcolumn">
+    ****
+    </div> 
+    <div id="midcolumn">       
+	<h1>Hot Water Circulation</h1>
+	<form action="">
+	    <p>Based on the hot water supply system characteristics, the following methods can be used. Method A and Method B are basically for small 	    systems. The heat loss method (Method C) is more accurate. The calculation procedure is described in detail in the book, "Engineered Plumbing Design", by Alfred Steele. It is especially useful for larger systems. However, because of its complexity for manual calculation, it is not widely used in plumbing system design. Then, Method D is introduced as an Excel template by using <abbr title="Visual Basic Application">VBA</abbr>. </p>
+	    <h3>A. Estimating Flowrate by Number of Risers:</h3>
+    	
+        <table border="1" align="center" width="100%">
+          <tr>
+            <td width="33%" align="center">Size of Riser</td>
+            <td width="33%" align="center">No. of Risers</td>
+            <td width="34%" align="center">Flow, L/m </td>
+          </tr>
+          <tr>
+            <td width="33%">25 mm or less</td>
+            <td width="33%" align="center"><input id="riser1in" value="1" onkeyup="Qriser1in(riser1in.value)"/></td>
+            <td width="34%" align="center" id="Qriser1">1.893</td>
+          </tr>
+          <tr>
+            <td width="33%">32 and 38 mm</td>
+            <td width="33%" align="center"><input id="riser1_5in" value="1" onkeyup="Qriser1_5in(riser1_5in.value)"/></td>
+            <td width="34%" align="center" id="Qriser1_5">3.785</td>
+          </tr>
+          <tr>
+            <td width="33%">50 mm and larger</td>
+            <td width="33%" align="center"><input id="riser2in" value="1" onkeyup="Qriser2in(riser2in.value)"/></td>
+            <td width="34%" align="center" id="Qriser2">7.570</td>
+          </tr>
+        </table>
+	    <h3>B. Estimating Flowrate by Fixture Units (FU):</h3>	
+        <table border="1" width="100%" align="center">
+          <tr>
+            <td width="50%" align="center">FU</td>
+            <td width="50%" align="center">Flow, L/m </td>
+          </tr>
+          <tr>
+            <td width="50%" align="center"><input id="fu" value="20" onkeyup="Qfu(fu.value)"/></td>
+            <td width="50%" align="center" id="Qfu">3.785</td>
+          </tr>
+        </table>
+	    <h3>C. Estimation of Circulation Flowrate by Heat Loss:</h3>
+        <table>
+        <caption>Table 1. Piping Heat Loss</caption> 
+        <colgroup span="5" width="20%" style="text-align:center;"></colgroup>
+        <tr><th colspan="5">(watt per lineal meter for 60°C water and 21°C room temperature.)</th></tr> 
+        <tr><th rowspan="2">Nominal  Pipe Size </th><th rowspan="2">Insulated Pipe (13 mm Fiberglass) </th><th colspan="3">Bare Pipe</th></tr>
+        <tr><th>Sch. 40 Steel  </th><th>Brass,  Copper, T.P. </th><th>Type K  Copper</th></tr>
+        <tr><td>13</td><td>14</td><td>34</td><td>25</td><td>18</td></tr>
+        <tr><td>19</td><td>16</td><td>41</td><td>31</td><td>25</td></tr>
+        <tr><td>25</td><td>18</td><td>51</td><td>37</td><td>31</td></tr>
+        <tr><td>32</td><td>20</td><td>62</td><td>44</td><td>37</td></tr>
+        <tr><td>38</td><td>24</td><td>70</td><td>51</td><td>44</td></tr>
+        <tr><td>50</td><td>27</td><td>87</td><td>62</td><td>56</td></tr>
+        <tr><td>64</td><td>31</td><td>104</td><td>72</td><td>65</td></tr>
+        <tr><td>75</td><td>37</td><td>124</td><td>87</td><td>78</td></tr>
+        <tr><td>100</td><td>44</td><td>157</td><td>109</td><td>99</td></tr>
+        <tr><td>125</td><td>53</td><td>191</td><td>133</td><td>122</td></tr>
+        <tr><td>150</td><td>61</td><td>224</td><td>155</td><td>143</td></tr>
+        <tr><td>200</td><td>77</td><td>287</td><td>193</td><td>181</td></tr>
+        </table>
+        Source: Converted from Engineered Plumbing Design, Alfred Steele, PE, CIPE 
+    </form>
+	<h3>D. The Computer-Aided Hot- Water Circulation System Sizing</h3> 
+    <p>This  <a href="../../Documents/Library/ASPE_HWR.pdf">VBA based template</a> was introduced by Anjian Lu, CPD, and published on Plumbing System &amp; Design magazine, Dec. 2004. By using this method, the required circulation flow rate and friction loss in the system are both calculated, so are the circulation pipe sizes and pump capacity.</p>
+    <div style="text-align:right;"><a href="../../indexSI.htm">Return to Main Menu</a></div>
+        </div>
+    <div id="rightcolumn">
+        <div id="equipMenu">
+        <b>Product Selection</b>             
+	        <form action="gotoLocation.cgi">
+		        <select id="newLocation" onclick="initForm()">
+                    <option>Select a Catagory</option>
+                    <option value="../../Ads/Valves/valveCO.html">Valves</option>
+                    <option value="../../Ads/Sumppump/SumppumpCO.html">Sump Pumps</option>
+                    <option value="../../Ads/Hangers/hangerCO.html">Pipe Supports</option>
+                    <option value="../../Ads/Highpuritywater/HighpuritywaterCO.html">RO/DI System</option>
+                    <option value="../../Ads/Instrument/instrumentCO.html">Instruments</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Water Treatment></option>
+                    <option value="../../Ads/Pipe/pipeCO.html">Piping</option>
+                    <option value="../../Ads/Waterheaters/WaterheaterCO.html">Water Heaters</option>
+                    <option value="../../Ads/Appurt/appurtCO.html">Specialties</option>
+                    <option value="../../Ads/Fixtures/Manufacturer-Fixture.htm">Fixtures</option>
+                    <option value="../../Ads/Waterpump/pumpCO.html">Boost Pumps</option>
+                    <option value="../../Ads/Fixture_medical/medicalfixturesCO.html">Medical Fixtures</option>
+                    <option value="../../Ads/Storagetanks/tankCO.html">Storage Tanks</option>
+                    <option value="../../Ads/Fixture_food/kitchenfixturesCO.html">Kitchen Equipment</option>
+                    <option value="../../Ads/Drainspecialties/DrainspecialtyCO.html">Drainage Specialties</option>
+                    <option value="../../Ads/ES_EW/emergencyfixtureCO.html">Emergency Equipment</option>
+                    <option value="../../Ads/Intercepters/IntercepterCO.html">Interceptors</option>
+                    <option value="../../Ads/Drinkingfountain/drinkingfountainCO.html">Drinking Fountains</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Septic Tanks</option>
+                    <option value="../../Ads/Medicalgases/medgasCO.html">Medical Gases</option>
+                    <option value="../../Ads/Roofdrains/RoofdrainCO.html">Roof Drains</option>
+                    <option value="../../Ads/Insulation/insulationCO.html">Insulation</option>
+                    <option value="../../Ads/Hengkang.htm">Plastics</option>
+                    <option value="../../Ads/Calculator/Ad-TI00.htm">Calculators</option> 
+		        </select>
+
+	        </form>	
+	        <br />	  
+        <b><a target="_blank"href="../../Ads/Manufacturers.htm">Manufacturers</a></b> 
+		
+        </div>    
+    </div>
+    <div id="footer">
+        <hr style="width:100%;color:blue;height:4px" />
+        <ul class="nav">
+  		    <li><a href="../../Reference/Terms.htm" target="main">Terms of Use</a></li>
+  		    <li><a href="../../Reference/Legal.htm" target="main">Legal Issues</a></li>
+  		    <li><a href="../../Reference/Privacy.htm" target="main">Privacy Policy</a></li>	  		
+	    </ul>
+          <div align="center">EngineerMate since 2005</div>   
+        <script type="text/javascript" src="http://kit.hichina.com/sitemanager/counter.asp?username=ufe471"></script>     
+    </div>
+    </div>
+</body>
+</html>

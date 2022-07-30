@@ -1,0 +1,92 @@
+﻿<%@ Master Language="VB" CodeFile="EngineerMateSite.master.vb" Inherits="EngineerMateSite" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>EngineerMate</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    
+    </asp:ContentPlaceHolder>
+    <link href="~/StyleCN.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="logo"><img  src="~/images/logo.jpg" alt="" runat="server" /></div>
+    <div id="company"><h2>EngineerMate</h2><br /><a href="http://www.engineermate.com" >工程师之友</a></div>
+  	<div id="banner"><img src="~/images/img-leisure/senery02.jpg" alt="" runat="server" /></div>  
+	<ul id="nav">
+  		<li><a id="A1" href="~/Home.aspx" runat="server">Home</a></li>	
+  		<li><a href="about.html">About Us</a></li>
+  		<li><a href="sevices.html">Discuss</a></li>
+  		<li><a href="mailto:alu@yahoo.com" target="main">Contact</a></li>	
+  		<li><a href="Download.htm">Download</a></li>
+	</ul>    
+       
+    <table id="mastertable" >
+  	    <colgroup>
+		    <col style="width:200px;" />
+
+		    <col style="width:800px;" align="left" />		    
+	    </colgroup> 
+       
+        <tr valign="top">
+            <td colspan="1" style="vertical-align:top;padding:5px; border-width:0 " >
+            <hr size="6" style="width: 200px; background-color: #0000FF;" />              
+            <asp:TreeView ID="Treeview1" runat="server"
+                datesourceid="SiteMapDataSource1" CssClass="left" 
+                    DataSourceID="SiteMapDataSource1" ExpandDepth="1" Font-Size="Small" 
+                    BackColor="#FFFFCC"  ForeColor="#000099" ImageSet="Simple" 
+                    BorderStyle="None" BorderWidth="0px" >
+                <ParentNodeStyle Font-Bold="False" />
+                <HoverNodeStyle BorderColor="White" Font-Underline="True" ForeColor="#0000CC" 
+                    Font-Bold="False" Font-Italic="True" />
+                <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" 
+                    HorizontalPadding="0px" VerticalPadding="0px" />
+                <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" 
+                    HorizontalPadding="0px" NodeSpacing="0px" VerticalPadding="0px" 
+                    BorderStyle="None" />
+                </asp:TreeView>
+                <asp:SiteMapPath ID="SiteMapPath1" runat ="server">
+                    <PathSeparatorTemplate>
+                        <asp:Image ID="Image1" ImageUrl ="~/images/arrowright.gif" runat="server" />
+                    </pathseparatortemplate>
+                    <RootNodeTemplate>
+                        <b>Root</b>
+                    </RootNodeTemplate>
+                    <CurrentNodeTemplate>
+                        <%#Eval("Title")%><br />
+                        <small><i><%#Eval("Description")%></i></small>
+                    </CurrentNodeTemplate>
+                </asp:SiteMapPath>                
+
+                 <asp:ContentPlaceHolder id="IndexArea" runat="server">
+                    <div class ="left" style="background-color: #66FFFF">                 
+                            <br />Important Agreement for Using This Site:<br />
+                            Click <a target="_blank" href="~\MasterPages\Disclaimer.html" runat ="server" >here</a> to read the agreement.
+                    </div> 
+                 </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder id="NewsArea" runat="server">
+                    <b></b>
+                    <br />
+                 </asp:ContentPlaceHolder>                  
+            </td>
+            <td>
+                <asp:ContentPlaceHolder id="MainContent" runat="server">
+                    
+                </asp:ContentPlaceHolder>    
+             </td>   
+        </tr> 
+        <tr>                      
+            <td colspan="3"> 
+                <asp:ContentPlaceHolder id="Footer" runat="server">
+                    <br />
+                  EngineerMate® 2008  All Rights Reserved 
+                </asp:ContentPlaceHolder>    
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+            </td>                         
+        </tr>        
+    </table>
+    </form>
+</body>
+</html>

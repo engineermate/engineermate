@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Unit Conversion</title>
+	
+	<script type="text/javascript" src="units.js"></script>
+    <link href="../../StyleSheetEN.css" rel="stylesheet" type="text/css" />
+
+    </head>
+<body>
+    <div id="container">
+    <div id="header">     	
+        <ul class="nav">
+  		    <li><a href="../../Reference/Contact.htm" target="main">Contact</a></li>
+  		    <li><a href="../../Reference/Products.htm"  target="main">Products</a></li>
+  		    <li><a href="../../Reference/Services.htm"  target="main">Services</a></li>
+  		    <li><a href="../../Reference/About.htm"  target="main">About Us</a></li>
+  		    <li><a id="A1" href="../../indexEN.htm"  target="main">Home</a></li>		  		
+	    </ul>
+        <div><img src="../../headerdesign.jpg" alt="工程师之友" /></div></div>
+    <div id="leftcolumn">
+        <h2>Some Links</h2>
+        <ul>
+        <li><a href="http://www.unitconversion.org/">unitconversion.org</a> 
+		        - Most comprehensive. Free for downloading, reorganizing, but not for resale.</li>
+        <li><a href="http://www.onlineconversion.com/">OnlineConversion.com</a> - comprehensive.</li>
+        <li><a href="http://www.unit-conversion.info/">unit-conversion.info</a> 
+         - With limited items, simple and easy to use. </li>
+        </ul> 
+        <h2>Note:</h2>
+        <ul>
+        <li>When this page first appears for converting <em>Length</em>, you need to type a number first in order to populate its units. </li>
+        </ul> 		
+    </div>    
+    <div id="midcolumn">
+        <div id="name"><h1>Unit Conversion</h1></div>
+        <div id="disc">
+            <p><b>Description: </b> The following tool is designed for common unit conversions in water, especially 
+                plumbing engineering. If you need more functions, please use the links on left 
+                or contact EngineerMate for software, which may meet your needs or expectations.</p>        
+        </div> 
+        <div id="form">  
+	    <form action="">	
+	    <table width="100%">
+	        <caption>Unit Conversion</caption>
+	        <colgroup 19%,15% 15% 5%></colgroup>
+	        <tr><th>Category</th><th width="15%">Input</th><th>Unit 1</th><th></th><th>
+                Output</th><th>Unit 2</th></tr>
+            <tr>
+                <td>
+                    <select id="category" onclick="populateMenu()")>
+                        <script type="text/javascript">
+                            xmlDoc = loadXMLDoc("xml/units.xml");                                   //load units.xml
+                            x1 = xmlDoc.getElementsByTagName("category");                       //get all category names
+                            for (j = 0; j < x1.length; j++) {
+                                var idval = x1[j].getAttribute("name");                         //assign category name to x1
+                                document.write("<option>" + idval + "</option>");               //write option menu
+                                document.write("<br />"); 
+                            }
+                            //alert(getSelectedName());
+                        </script>                     
+                    </select>
+                </td>      	                                    
+                <td> <input type="text" id="unit1value" value="1" onkeyup="calcUnit(unit1value.value,1 ,2)"/></td>
+                <td>
+                    <select id="unit1"onchange="calcUnit(unit1value.value,1 ,2 )">
+                    
+                    </select>
+	            </td>   
+                <td style="text-align: center">=</td>
+                    
+                <td id="output"> </td>
+                
+                <td>
+                    <select id="unit2"onclick="calcUnit(unit1value.value,1 ,2 )">
+                    
+                    </select>
+                </td>            
+            </tr>
+            </table>  
+        </form> 
+        </div> 
+        <div id="how">
+        <h3>How to Use: </h3>
+            <p> 1. Select a category; 2. Input number (or 
+                1 as default); 3. Select Unit 1 (unit from); 4. Select Unit 2 (unit 
+                to); 5. The result will show beneath Output.</p>
+            <p><b>Important: You need to select a category to activate the form even it is first loaded with the category you want. </b></p>    
+            <h2>More from EngineerMate</h2> 
+            <img class="right" border="0" src="pics/UnitConversion.jpg" width="301" height="227" alt=""/>
+            EngineerMate's unit converter includes the following features:
+            <ul>
+            <li>Decimal point selection.</li>
+            <li>Multiple Unit Conversion with calculation.</li>
+            <li>Recording function.</li>
+            <li>Bilingual: Chinese/English.</li>
+            <li>Temperature: conversion between Celsius, Fahrenheit, Kelvin and Rankine.</li>
+            </ul>
+        </div>
+        The picture on left shows the form layout.
+
+        <div style="text-align:right;"><a href="../../index.htm">Return to Main Menu</a></div>               
+          
+         
+    </div>
+    <div id="rightcolumn">
+        <div id="equipMenu">
+        <b>Product Selection</b>             
+	        <form action="gotoLocation.cgi">
+		        <select id="newLocation" onclick="initForm()">
+                    <option>Select a Catagory</option>
+                    <option value="../../Ads/Valves/valveCO.html">Valves</option>
+                    <option value="../../Ads/Sumppump/SumppumpCO.html">Sump Pumps</option>
+                    <option value="../../Ads/Hangers/hangerCO.html">Pipe Supports</option>
+                    <option value="../../Ads/Highpuritywater/HighpuritywaterCO.html">RO/DI System</option>
+                    <option value="../../Ads/Instrument/instrumentCO.html">Instruments</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Water Treatment></option>
+                    <option value="../../Ads/Pipe/pipeCO.html">Piping</option>
+                    <option value="../../Ads/Waterheaters/WaterheaterCO.html">Water Heaters</option>
+                    <option value="../../Ads/Appurt/appurtCO.html">Specialties</option>
+                    <option value="../../Ads/Fixtures/Manufacturer-Fixture.htm">Fixtures</option>
+                    <option value="../../Ads/Waterpump/pumpCO.html">Boost Pumps</option>
+                    <option value="../../Ads/Fixture_medical/medicalfixturesCO.html">Medical Fixtures</option>
+                    <option value="../../Ads/Storagetanks/tankCO.html">Storage Tanks</option>
+                    <option value="../../Ads/Fixture_food/kitchenfixturesCO.html">Kitchen Equipment</option>
+                    <option value="../../Ads/Drainspecialties/DrainspecialtyCO.html">Drainage Specialties</option>
+                    <option value="../../Ads/ES_EW/emergencyfixtureCO.html">Emergency Equipment</option>
+                    <option value="../../Ads/Intercepters/IntercepterCO.html">Interceptors</option>
+                    <option value="../../Ads/Drinkingfountain/drinkingfountainCO.html">Drinking Fountains</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Septic Tanks</option>
+                    <option value="../../Ads/Medicalgases/medgasCO.html">Medical Gases</option>
+                    <option value="../../Ads/Roofdrains/RoofdrainCO.html">Roof Drains</option>
+                    <option value="../../Ads/Insulation/insulationCO.html">Insulation</option>
+                    <option value="../../Ads/Hengkang.htm">Plastics</option>
+                    <option value="../../Ads/Calculator/Ad-TI00.htm">Calculators</option> 
+		        </select>
+
+	        </form>	
+	        <br />	  
+        <b><a target="_blank"href="../../Ads/Manufacturers.htm">Manufacturers</a></b> 
+		
+        </div>    
+    </div>
+    <div id="footer">
+        <hr style="width:100%;color:blue;height:4px" />
+        <ul class="nav">
+  		    <li><a href="../../Reference/Terms.htm" target="main">Terms of Use</a></li>
+  		    <li><a href="../../Reference/Legal.htm" target="main">Legal Issues</a></li>
+  		    <li><a href="../../Reference/Privacy.htm" target="main">Privacy Policy</a></li>  		
+	    </ul>
+          <div align="center">EngineerMate since 2005</div>   
+        <script type="text/javascript" src="http://kit.hichina.com/sitemanager/counter.asp?username=ufe471"></script>     
+    </div>
+    </div>
+</body>
+</html>

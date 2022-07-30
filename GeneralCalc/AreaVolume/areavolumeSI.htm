@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Area and Volume</title>
+    <link href="../../StyleSheetSI.css" rel="stylesheet" type="text/css" />
+    <script src="areavolume.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="container">
+    <div id="header">     	
+        <ul class="nav">
+  		    <li><a href="../../Reference/Contact.htm" target="_blank">Contact</a></li>
+  		    <li><a href="../../Reference/Products.htm" runat="server">Products</a></li>
+  		    <li><a href="../../Reference/Services.htm" runat="server">Services</a></li>
+  		    <li><a href="../../Reference/About.htm" target="HTMLPage">About Us</a></li>
+  		    <li><a id="A1" href="../../indexSI.htm" runat="server">Home</a></li>		  		
+	    </ul>
+        <div><img src="../../headerdesign.jpg" alt="工程师之友" /></div></div>
+    <div id="leftcolumn">
+        <h2>Triangle</h2>
+        <img style="width:90%;" src="pics/triangle.jpg" alt="" />
+        <p>While it is easy to calculate the area of a triangle when its bottom and height are known, it is interesting to resolve other three elements while 3 of the 6 elements (3 sides and 3 angles) are known.</p>
+        <p>The sum of its 3 angles is always equal to 180&deg;, or 1 PI (&pi;). Therefore, 
+            the third angle is known when the other 2 angles are known.</p>
+        <p>Calculations of the triangle can fill a whole textbook, which is called 
+            trigonometry.</p>
+        <p>Let&#39;s play with it! </p>  
+        <h2>Circle</h2>
+        <p>Area of a circle is simple to calculate: <i>A = &pi;/4 * D<sup>2</sup>.</i></p>
+        <p>However, if a circular section of a pipe filled with partial full water, it may 
+            not so easy to know its wet area, wet perimeter, which give you hydraulic radius 
+            by <i>WA / WL = Rh.</i> Let&#39;s use the calculator on the right to resolve it.</p>  
+         <h2>Cylinder or Pipe?</h2> 
+         <p>Similar!</p>
+        <p>The calculator on right is capable to calculate the volume, weight with or 
+            without water in it for pipes from steel to PVC.</p>
+        <p>Do not forget to use it in your sump pit calculations, too!</p>
+        <p>More useful calculators are to come.</p>          
+    </div>    
+    <div id="midcolumn">
+    <h1>Area and Volume</h1>
+    <form action="">
+        <div style="float:right;">Decimal Point: 
+                    <select name="decimalp" id="decimalp">
+                        <option>0</option>
+                        <option>1</option>                    
+                        <option selected='selected'>2</option>
+                        <option>3</option>                     
+                        <option>4</option>
+                        <option>5</option>                     
+                        <option>6</option>
+                        <option>7</option>                     
+                        <option>8</option>
+                        <option>9</option> 
+                        <option>10</option>                                             
+                    </select>        
+        </div>
+        <table width="100%">
+            <caption>Triangle (bottom and height)</caption>        
+            <colgroup span="6" width="15%" align="right"></colgroup>
+            <tr>
+                <th width="10%">Bottom</th><th width="10%">Height</th><th></th><th>Area</th><th></th><th></th>
+            </tr>
+            <tr>
+                <td><input type="text"id="b" onkeyup="trianglebh(b.value,h.value)"/></td>
+                <td><input type="text"id="h" onkeyup="trianglebh(b.value,h.value)"/></td> 
+                <td></td>                 
+                <td id="areabh"></td> 
+                <td></td> <td></td>                                                      
+            </tr>
+        </table> 
+
+        <table width="100%">
+            <caption>Triangle (3 sides)</caption>        
+            <colgroup span="6" width="15%" align="right"></colgroup>
+            <tr>
+                <th width="10%">Side a</th><th width="10%">Side b</th><th>Side C</th><th>Area</th><th>
+                &ang;A&deg;</th><th>&ang;B&deg;</th>
+            </tr>
+            <tr>
+                <td><input type="text"id="ta" onkeyup="triangleabc(ta.value,tb.value,tc.value)"/></td>
+                <td><input type="text"id="tb" onkeyup="triangleabc(ta.value,tb.value,tc.value)"/></td> 
+                <td><input type="text"id="tc" onkeyup="triangleabc(ta.value,tb.value,tc.value)"/></td>                 
+                <td id="abcArea"></td> 
+                <td id="abcA"></td><td id="abcB"></td>                                                      
+            </tr>
+        </table> 
+      
+        <table width="100%">
+            <caption>Triangle (Side, Angle, Side)</caption>           
+            <colgroup span="6" width="15%" align="right"></colgroup>        
+            <tr>
+                <th><abbr title="Hazen-Williams C">Side a</abbr></th><th>&ang;C&deg;</th><th>Side b</th><th>Area</th><th>Side c</th><th>
+                &ang;A&deg;</th>
+            </tr>
+            <tr>
+                <td><input type="text"id="aCba" onkeyup="triangleaCb(aCba.value,aCbC.value,aCbb.value)"/></td>
+                <td><input type="text"id="aCbC" onkeyup="triangleaCb(aCba.value,aCbC.value,aCbb.value)"/></td> 
+                <td><input type="text"id="aCbb" onkeyup="triangleaCb(aCba.value,aCbC.value,aCbb.value)"/></td>                            
+                <td id="aCbAangle"></td> 
+                <td id="aCbcside"></td>
+                <td id="aCbAarea"></td>                                              
+            </tr>
+        </table> 
+        <table width="100%">
+            <caption>Triangle (Angle, Side, Angle)</caption>           
+            <colgroup span="6" width="15%" align="right"></colgroup>        
+            <tr>
+                <th>&ang;C&deg;</th><th>Side a</th><th>&ang;B&deg;</th><th>Area</th><th>Side c</th><th>
+                Side b</th>
+            </tr>
+            <tr>
+                <td><input type="text"id="CaBC" onkeyup="triangleCaB(CaBC.value,CaBa.value,CaBB.value)" /></td>
+                <td><input type="text"id="CaBa" onkeyup="triangleCaB(CaBC.value,CaBa.value,CaBB.value)" /></td> 
+                <td><input type="text"id="CaBB" onkeyup="triangleCaB(CaBC.value,CaBa.value,CaBB.value)" /></td>                            
+                <td id="CaBArea"></td> 
+                <td id="CaBcside"></td>
+                <td id="CaBbside"></td>                                              
+            </tr>
+        </table>      
+        <table width="100%">
+            <caption>Circle/Hydraulic Radius</caption>           
+            <colgroup span="6" width="15%" align="right"></colgroup>
+            <tr>
+                <th width="50px">D</th><th>h/D (0-1)</th><th>Wet area</th>
+                <th>Wet L</th><th>Rh</th>
+            </tr>
+            <tr>
+                <td><input type="text"id="CircD" onkeyup="circleRh(CircD.value,CirchD.value)" /></td>
+                <td><input type="text"id="CirchD" value="1"  onkeyup="circleRh(CircD.value,CirchD.value)" /></td> 
+                <td id="CircWA"></td> 
+                <td id="CircWL"></td>                                            
+                <td id="CircRh"></td>                 
+            </tr>
+          
+        </table>          
+        <table width="100%">
+            <caption>Cylinder/Pipe</caption>           
+            <colgroup span="6" width="15%" align="right"></colgroup>
+            <tr>
+                <th width="50px" rowspan="2">D<sub>inside</sub> (mm)</th><th rowspan="2">L (m)</th><th rowspan="2">
+                Wall thick. (mm)</th><th rowspan="2">Volume (m<sup>3</sup>)</th>
+                <th colspan="2">Weight (Kg)</th><th rowspan="2" style="font-size:1.0em;">Pipe Material<br />
+                <select id="Pweight" tabindex="3" onchange="cylinderSI(CylD.value,CylL.value,CylWall.value,Pweight.value)" >              
+                    <option value='Steel'>Steel</option>
+                    <option value='ABS'>ABS</option>
+                    <option value='Aluminum'>Aluminum</option>
+                    <option value='Brass'>Brass</option>
+                    <option value='Cast iron'>Cast iron</option>
+                    <option value='Concrete'>Concrete</option>
+                    <option value='Copper'>Copper</option>
+                    <option value='Ductile iron'>Ductile iron</option>
+                    <option value='Fiberglass'>Fiberglass</option>
+                    <option value='PP'>PP</option>
+                    <option value='PVC'>PVC</option>
+                    <option value='S. Steel'>S. Steel</option>
+                    <option value='Wrought iron'>Wrought iron</option>                                                                                                           </select>
+                </th>
+            </tr>
+            <tr>
+                <th>w/o H<sub><span class="style1">2</span></sub>O</th><th>w/ H<sub><span 
+                    class="style1">2</span></sub>O</th>
+            </tr>            
+            <tr>
+                <td><input type="text"id="CylD" onkeyup="cylinderSI(CylD.value,CylL.value,CylWall.value,Pweight.value)" /></td>
+                <td><input type="text"id="CylL" value="1" onkeyup="cylinderSI(CylD.value,CylL.value,CylWall.value,Pweight.value)" /></td> 
+                <td><input type="text"id="CylWall" value="0" onkeyup="cylinderSI(CylD.value,CylL.value,CylWall.value,Pweight.value)" /></td>                 
+                <td id="CylVol"></td> 
+                <td id="CylWwo"></td>                                            
+                <td id="CylWw"></td>
+                <td id="SpWt"></td>                  
+            </tr>
+        </table>                 
+    </form> 
+    <div style="text-align:right;"><a href="../../indexSI.htm">Return to Main Menu</a></div>     
+    </div> 
+    <div id="rightcolumn">
+        <div id="equipMenu">
+        <b>Product Selection</b>             
+	        <form action="gotoLocation.cgi">
+		        <select id="newLocation" onclick="initForm()">
+                    <option>Select a Catagory</option>
+                    <option value="../../Ads/Valves/valveCO.html">Valves</option>
+                    <option value="../../Ads/Sumppump/SumppumpCO.html">Sump Pumps</option>
+                    <option value="../../Ads/Hangers/hangerCO.html">Pipe Supports</option>
+                    <option value="../../Ads/Highpuritywater/HighpuritywaterCO.html">RO/DI System</option>
+                    <option value="../../Ads/Instrument/instrumentCO.html">Instruments</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Water Treatment></option>
+                    <option value="../../Ads/Pipe/pipeCO.html">Piping</option>
+                    <option value="../../Ads/Waterheaters/WaterheaterCO.html">Water Heaters</option>
+                    <option value="../../Ads/Appurt/appurtCO.html">Specialties</option>
+                    <option value="../../Ads/Fixtures/Manufacturer-Fixture.htm">Fixtures</option>
+                    <option value="../../Ads/Waterpump/pumpCO.html">Boost Pumps</option>
+                    <option value="../../Ads/Fixture_medical/medicalfixturesCO.html">Medical Fixtures</option>
+                    <option value="../../Ads/Storagetanks/tankCO.html">Storage Tanks</option>
+                    <option value="../../Ads/Fixture_food/kitchenfixturesCO.html">Kitchen Equipment</option>
+                    <option value="../../Ads/Drainspecialties/DrainspecialtyCO.html">Drainage Specialties</option>
+                    <option value="../../Ads/ES_EW/emergencyfixtureCO.html">Emergency Equipment</option>
+                    <option value="../../Ads/Intercepters/IntercepterCO.html">Interceptors</option>
+                    <option value="../../Ads/Drinkingfountain/drinkingfountainCO.html">Drinking Fountains</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Septic Tanks</option>
+                    <option value="../../Ads/Medicalgases/medgasCO.html">Medical Gases</option>
+                    <option value="../../Ads/Roofdrains/RoofdrainCO.html">Roof Drains</option>
+                    <option value="../../Ads/Insulation/insulationCO.html">Insulation</option>
+                    <option value="../../Ads/Hengkang.htm">Plastics</option>
+                    <option value="../../Ads/Calculator/Ad-TI00.htm">Calculators</option> 
+		        </select>
+
+	        </form>	
+	        <br />	  
+        <b><a target="_blank"href="../../Ads/Manufacturers.htm">Manufacturers</a></b> 
+		
+        </div>    
+    </div>
+    <div id="footer">
+        <hr style="width:100%;color:blue;height:4px" />
+        <ul class="nav">
+  		    <li><a href="../../Reference/Terms.htm" target="main">Terms of Use</a></li>
+  		    <li><a href="../../Reference/Legal.htm" target="main">Legal Issues</a></li>
+  		    <li><a href="../../Reference/Privacy.htm" target="main">Privacy Policy</a></li>  		
+	    </ul>
+          <div align="center">EngineerMate since 2005</div>   
+        <script type="text/javascript" src="http://kit.hichina.com/sitemanager/counter.asp?username=ufe471"></script>      
+    </div>         
+    </div>
+</body>
+</html>

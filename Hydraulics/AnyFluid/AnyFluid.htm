@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Any Fluid</title>
+	<script src="../../GeneralCalc/Units/units.js" type="text/javascript"></script>
+    <link href="../../StyleSheetEN.css" rel="stylesheet" type="text/css" />
+
+    </head>
+<body>
+    <div id="container">
+
+        
+    <div id="header">     	
+        <ul class="nav">
+  		    <li><a href="../../Reference/Contact.htm" target="main">Contact</a></li>
+  		    <li><a href="../..//Reference/Products.htm"  target="main">Products</a></li>
+  		    <li><a href="../../Reference/Services.htm"  target="main">Services</a></li>
+  		    <li><a href="../../Reference/About.htm"  target="main">About Us</a></li>
+  		    <li><a id="A1" href="../../index.htm"  target="main">Home</a></li>		  		
+	    </ul>
+        <div><img src="../../headerdesign.jpg" alt="工程师之友" /></div></div>
+    <div id="leftcolumn">
+        ****  
+    </div>    
+    <div id="midcolumn">
+        <h2>Friction Loss Calc for Any Fluid</h2> 
+        
+	    <h3>Engineer's Tasks:</h3>
+	    In water and wastewater as well as plumbing engineering the engineers have to design systems for the following fluids:
+	    <ul>
+	        <li>Water (Cold, Hot, Pure);</li>
+	        <li>Water containing solids and other solutions:
+	            <ul>
+	                <li>Sludge;</li>
+	                <li>Chlorine, sodium hydroxide, chloride and hypochlorite, sulfur oxide, and more...</li>
+	                <li>Other liquids, such as oil, and more...</li>	                                
+	            </ul>
+	        </li>
+	        <li>Compressed air and vacuum;</li>
+                                <li>Fuel gases and liquids: natural gas, propane, methane, and more...</li> 
+	        <li>Various gases for healthcare and laboratory use:
+	            <ul>
+	                <li>Oxygen;</li>
+	                <li>Carbon dioxide;</li>	                
+	                <li>Nitrogen;</li>
+	                <li>Nitrous oxide;</li>
+	                <li>Rare gases, such as argon, helium, and more... </li>	                	                                
+	            </ul>	        
+	        </li>	           
+	    </ul>
+	    
+        <h3>Darcy-Weisbach formula:</h3>
+        <img class="formula" src="pics/Darcy01.jpg" alt="" /><br />
+        <p class="formexp">Where:<br/>
+        <em>H<sub>f</sub></em> - Lost Head (friction loss);<br/>
+        <em>f</em> - Friction factor;<br/>
+        <em>L</em> - Length of pipe; 
+        <em>d</em> - Pipe diameter;<br/>
+        <em>V</em> - Average Velocity;<br/>
+        <em>g</em> - Gravitational acceleration.         
+        </p>           
+	        Darcy-Weisbach formula is based on theoretical analysis by using experimental data to deal 
+	        with the actual engineering calculation. It can resolve the lost head of any fluid flowing in 
+	        pipes and conduits. Since more than one and half centuries ago, numerous scientists
+            and engineers 	in hydraulics have been contributed their work to make the use of formula 
+            practical.
+                            <br />
+                            <h3>Traditional method - the Moody Diagram:</h3>
+	        The Moody Diagram introduced in 1944 made it possible for practical engineering use.
+            Click <a href="pics/moody-diagram.png">here</a> to see The Moody Diagram.
+            
+        <h3>You need these parameters to get the job done:</h3>
+        However, you still need to get quite a lot of data before using the Moody Diagram. Click the 
+        links in the flowing table to see the formulas and parameters involved. They are explained in the 
+        last column as well as at the end of the table.
+
+          <table width="100%">
+  	            <caption>Parameters in Resolving Darcy-Weisbach Formula</caption>
+  	            <col width="30" align="center"/>
+	            <col width="30" align="center"/>
+	            <col width="30" align="center"/>
+	            <col width="30" align="center"/>
+	            <col width="30" align="center"/>
+	            <col width="30" align="center"/>
+	            <col align="left"/>		
+            <tr>
+              <td><a href="pics/Darcy01.jpg"><em>H<sub>f</sub></em><a></td>
+              <td>L</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>L</td>
+              <td>length</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td><a href="pics/Darcy02.jpg"><em>f</em></a></td>
+              <td><font face="GreekS">e</font></td>
+              <td></td>
+              <td></td>
+              <td><font face="GreekS">e</font></td>
+              <td>absolute roughness</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>d</td>
+              <td>d</td>
+              <td>d</td>
+              <td></td>
+              <td>d</td>
+              <td>diameter</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>&nbsp;</td>
+              <td><a href="pics/Darcy03.jpg"><em>Re</em></a></td>
+              <td>V</td>
+              <td></td>
+              <td>V</td>
+              <td>velocity</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>&nbsp;</td>
+              <td></td>
+              <td><a href="pics/Darcy04.jpg"><font face="GreekS">m</font></a></td>      
+              <td></td>
+              <td><font face="GreekS">m</font></td>
+              <td>dynamic viscosity</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><a href="pics/Darcy05.jpg"><font face="GreekS" color="#0000FF"><b>r</b></font></a></td>
+              <td>R</td>
+              <td>R</td>
+              <td>gas constant</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>t</td>
+              <td>t</td>
+              <td>temperature</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>p</td>
+              <td>p</td>
+              <td>pressure</td>
+            </tr>
+          </table>
+
+        <p class="formexp">Note:<br/>
+            <em>Re</em> - Reynolds number; 
+        <font face="GreekS"><br/>r</font> - Mass Density.</p>
+
+        <h3>PlumAL's Calculator & Reportor</h3>
+        <h4>Specially designed for convenient input of data:</h4>
+        In stead of inputting parameters one by one, the Lost Head Calculation Form provides dropdown menus 
+        for user selection. To make the Form more flexible, you may also input you own data. In this way,
+        the Form can be used for lost head calculations of almost all kind of fluids.
+            <div>
+  		        <h5>Lost Head Calculation for Any Fluid (O<sub>2</sub> as Example):</h5> 
+                <img style="width:100%;height:auto;" src="pics/FluidCalc.jpg" alt="" />
+            </div>
+        <h4>Calculate, Record, Summarize, Edit and Print</h4>
+           <p>The following table summarizes the canculation results and can be incorporated in to a report.</p>
+            <div>
+  		        <h5>Sample Report:</h5>             
+                <img style="width:100%;height:auto;" src="pics/FluidCalcReport.jpg" alt=""/>
+            </div>
+    </div>
+    <div id="rightcolumn">
+        <div id="equipMenu">
+        <b>Product Selection</b>             
+	        <form action="gotoLocation.cgi">
+		        <select id="newLocation" onclick="initForm()">
+                    <option>Select a Catagory</option>
+                    <option value="../../Ads/Valves/valveCO.html">Valves</option>
+                    <option value="../../Ads/Sumppump/SumppumpCO.html">Sump Pumps</option>
+                    <option value="../../Ads/Hangers/hangerCO.html">Pipe Supports</option>
+                    <option value="../../Ads/Highpuritywater/HighpuritywaterCO.html">RO/DI System</option>
+                    <option value="../../Ads/Instrument/instrumentCO.html">Instruments</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Water Treatment></option>
+                    <option value="../../Ads/Pipe/pipeCO.html">Piping</option>
+                    <option value="../../Ads/Waterheaters/WaterheaterCO.html">Water Heaters</option>
+                    <option value="../../Ads/Appurt/appurtCO.html">Specialties</option>
+                    <option value="../../Ads/Fixtures/Manufacturer-Fixture.htm">Fixtures</option>
+                    <option value="../../Ads/Waterpump/pumpCO.html">Boost Pumps</option>
+                    <option value="../../Ads/Fixture_medical/medicalfixturesCO.html">Medical Fixtures</option>
+                    <option value="../../Ads/Storagetanks/tankCO.html">Storage Tanks</option>
+                    <option value="../../Ads/Fixture_food/kitchenfixturesCO.html">Kitchen Equipment</option>
+                    <option value="../../Ads/Drainspecialties/DrainspecialtyCO.html">Drainage Specialties</option>
+                    <option value="../../Ads/ES_EW/emergencyfixtureCO.html">Emergency Equipment</option>
+                    <option value="../../Ads/Intercepters/IntercepterCO.html">Interceptors</option>
+                    <option value="../../Ads/Drinkingfountain/drinkingfountainCO.html">Drinking Fountains</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Septic Tanks</option>
+                    <option value="../../Ads/Medicalgases/medgasCO.html">Medical Gases</option>
+                    <option value="../../Ads/Roofdrains/RoofdrainCO.html">Roof Drains</option>
+                    <option value="../../Ads/Insulation/insulationCO.html">Insulation</option>
+                    <option value="../../Ads/Hengkang.htm">Plastics</option>
+                    <option value="../../Ads/Calculator/Ad-TI00.htm">Calculators</option> 
+		        </select>
+	        </form>	
+	        <br />	  
+        <b><a target="_blank"href="../../Ads/Manufacturers.htm">Manufacturers</a></b> 
+		
+        </div>    
+    </div>
+    <div id="footer">
+        <hr style="width:100%;color:blue;height:4px" />
+        <ul class="nav">
+  		    <li><a href="../../Reference/Terms.htm" target="main">Terms of Use</a></li>
+  		    <li><a href="../../Reference/Legal.htm" target="main">Legal Issues</a></li>
+  		    <li><a href="../../Reference/Privacy.htm" target="main">Privacy Policy</a></li>  		
+	    </ul>
+          <div align="center">EngineerMate since 2005</div>   
+        <script type="text/javascript" src="http://kit.hichina.com/sitemanager/counter.asp?username=ufe471"></script>     
+    </div>
+    </div>
+</body>
+</html>

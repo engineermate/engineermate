@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HW Power Required</title>
+	
+	<script type="text/javascript" src="CW_HW.js"></script>
+    <link href="../../StyleSheetEN.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        td {text-align:center;}
+    </style>
+    </head>
+<body>
+    <div id="container">
+    <div id="header">     	
+        <ul class="nav">
+  		    <li><a href="../../Reference/Contact.htm" target="_blank">Contact</a></li>
+  		    <li><a href="../../Reference/Products.htm" runat="server">Products</a></li>
+  		    <li><a href="../../Reference/Services.htm" runat="server">Services</a></li>
+  		    <li><a href="../../Reference/About.htm" target="HTMLPage"onclick="getAbout()">About Us</a></li>
+  		    <li><a id="A1" href="../../indexEN.htm" runat="server">Home</a></li>		  		
+	    </ul>
+        <div><img src="../../headerdesign.jpg" alt="工程师之友" /></div></div>
+    <div id="leftcolumn">
+    ****
+    </div> 
+    <div id="midcolumn">	
+        <h3>Water Supply</h3>
+        <h1>Hot Water Power Required</h1> 
+            <form action="">
+                <table style="width:100%;font-size:0.84em;" id="hwpower">
+                    <caption>Power Required:</caption>
+                    <colgroup span="1-6" width="14%" align="center"></colgroup>
+                    <tr>
+                        <th>Recovery Flow<br />(gpm)</th><th><abbr title="Cold Water Temperature">CW Temp</abbr><br />(&deg;F)</th><th><abbr title="Hot Water Temperature">HW Temp</abbr><br />(&deg;F)</th><th>
+                        <abbr title="Efficiency">Eff.</abbr><br />(%)</th><th><abbr title="Horse Power">HP</abbr><br /> Req&#39;d</th><th><abbr title="Killo Watts">kW</abbr><br /> Req&#39;d</th><th><abbr title="=1000 Btu/hr">MBH</abbr><br /> Req&#39;d</th><th>Steam<br />(lb/hr)</th>
+                    </tr>                    
+                    <tr>
+                        <td><input type="text" id="gpm" value="" onkeyup="power(gpm.value,cwf.value,hwf.value,eff.value)" /></td>            
+                        <td><input type="text" id="cwf" value="40" onkeyup="power(gpm.value,cwf.value,hwf.value,eff.value)" /></td>
+                        <td><input type="text" id="hwf" value="140" onkeyup="power(gpm.value,cwf.value,hwf.value,eff.value)" /></td> 
+                        <td><input type="text" id="eff" value="100" onkeyup="power(gpm.value,cwf.value,hwf.value,eff.value)" /></td>                        
+                        <td id="hp"></td>  
+                        <td id="kw"></td>                          
+                        <td id="mbh"></td> 
+                        <td id="lbh"></td>                                                    
+                    </tr>                   
+                </table>
+                Notes: 
+                                <ol>
+                  <li>kW is an SI unit listed here for reference.</li> 
+                  <li>960 Btu/lb is used for latent heat value of steam. User should adjust according to the actual pressure and temperature of steam.</li>                    
+                </ol>
+            </form> 
+        <div style="text-align:right;"><a href="../../indexEN.htm">Return to Main Menu</a></div>                                                      
+    </div>
+    <div id="rightcolumn">
+        <div id="equipMenu">
+        <b>Product Selection</b>             
+	        <form action="gotoLocation.cgi">
+		        <select id="newLocation" onclick="initForm()">
+                    <option>Select a Catagory</option>
+                    <option value="../../Ads/Valves/valveCO.html">Valves</option>
+                    <option value="../../Ads/Sumppump/SumppumpCO.html">Sump Pumps</option>
+                    <option value="../../Ads/Hangers/hangerCO.html">Pipe Supports</option>
+                    <option value="../../Ads/Highpuritywater/HighpuritywaterCO.html">RO/DI System</option>
+                    <option value="../../Ads/Instrument/instrumentCO.html">Instruments</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Water Treatment></option>
+                    <option value="../../Ads/Pipe/pipeCO.html">Piping</option>
+                    <option value="../../Ads/Waterheaters/WaterheaterCO.html">Water Heaters</option>
+                    <option value="../../Ads/Appurt/appurtCO.html">Specialties</option>
+                    <option value="../../Ads/Fixtures/Manufacturer-Fixture.htm">Fixtures</option>
+                    <option value="../../Ads/Waterpump/pumpCO.html">Boost Pumps</option>
+                    <option value="../../Ads/Fixture_medical/medicalfixturesCO.html">Medical Fixtures</option>
+                    <option value="../../Ads/Storagetanks/tankCO.html">Storage Tanks</option>
+                    <option value="../../Ads/Fixture_food/kitchenfixturesCO.html">Kitchen Equipment</option>
+                    <option value="../../Ads/Drainspecialties/DrainspecialtyCO.html">Drainage Specialties</option>
+                    <option value="../../Ads/ES_EW/emergencyfixtureCO.html">Emergency Equipment</option>
+                    <option value="../../Ads/Intercepters/IntercepterCO.html">Interceptors</option>
+                    <option value="../../Ads/Drinkingfountain/drinkingfountainCO.html">Drinking Fountains</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Septic Tanks</option>
+                    <option value="../../Ads/Medicalgases/medgasCO.html">Medical Gases</option>
+                    <option value="../../Ads/Roofdrains/RoofdrainCO.html">Roof Drains</option>
+                    <option value="../../Ads/Insulation/insulationCO.html">Insulation</option>
+                    <option value="../../Ads/Hengkang.htm">Plastics</option>
+                    <option value="../../Ads/Calculator/Ad-TI00.htm">Calculators</option> 
+		        </select>
+
+	        </form>	
+	        <br />	  
+        <b><a target="_blank"href="../../Ads/Manufacturers.htm">Manufacturers</a></b> 
+		
+        </div>    
+    </div>
+    <div id="footer">
+        <hr style="width:100%;color:blue;height:4px" />
+        <ul class="nav">
+  		    <li><a href="../../Reference/Terms.htm" target="main">Terms of Use</a></li>
+  		    <li><a href="../../Reference/Legal.htm" target="main">Legal Issues</a></li>
+  		    <li><a href="../../Reference/Privacy.htm" target="main">Privacy Policy</a></li>	  		
+	    </ul>
+          <div align="center">EngineerMate since 2005</div>   
+        <script type="text/javascript" src="http://kit.hichina.com/sitemanager/counter.asp?username=ufe471"></script>     
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="pipecode.xsl"?>
+<leaders>
+  <size Inch="2">
+    <capacity name="sf">443</capacity>
+    <capacity name="gpm">23</capacity>
+  </size>
+  <size Inch="2-1/2">
+    <capacity name="sf">789</capacity>
+    <capacity name="gpm">41</capacity>
+  </size>
+  <size Inch="3">
+    <capacity name="sf">1290</capacity>
+    <capacity name="gpm">67</capacity>
+  </size>
+  <size Inch="4">
+    <capacity name="sf">2772</capacity>
+    <capacity name="gpm">144</capacity>
+  </size>
+  <size Inch="5">
+    <capacity name="sf">5024</capacity>
+    <capacity name="gpm">261</capacity>
+  </size>
+  <size Inch="6">
+    <capacity name="sf">8162</capacity>
+    <capacity name="gpm">424</capacity>
+  </size>
+  <size Inch="8">
+    <capacity name="sf">17595</capacity>
+    <capacity name="gpm">914</capacity>
+  </size>
+</leaders>

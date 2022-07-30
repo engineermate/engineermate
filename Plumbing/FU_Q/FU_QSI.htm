@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Water Supply</title>
+	
+	<script type="text/javascript" src="../HW/CW_HWSI.js"></script>
+    <link href="../../StyleSheetSI.css" rel="stylesheet" type="text/css" />
+
+    </head>
+<body>
+    <div id="container">
+    <div id="header">     	
+        <ul class="nav">
+  		    <li><a href="../../Reference/Contact.htm" target="_blank">Contact</a></li>
+  		    <li><a href="../../Reference/Products.htm" runat="server">Products</a></li>
+  		    <li><a href="../../Reference/Services.htm" runat="server">Services</a></li>
+  		    <li><a href="../../Reference/About.htm" target="HTMLPage"onclick="getAbout()">About Us</a></li>
+  		    <li><a id="A1" href="../../indexSI.htm" runat="server">Home</a></li>		  		
+	    </ul>
+        <div><img src="../../headerdesign.jpg" alt="工程师之友" /></div></div>
+    <div id="leftcolumn">
+        ****   
+    </div> 
+    <div id="midcolumn">	
+        <h3>Water Supply</h3>
+        <h1><abbr title="Water Supply Fixture Unit">WSFU</abbr> vs. Flow</h1>
+            <div>
+            <form action="">
+                <table id="wsfuq">
+                    <caption>WSFU vs. Flow:</caption>
+                    <colgroup width="25%"></colgroup>
+                    <tr>
+                        <th rowspan="2"><abbr title="Water Supply Fixture Unit">WSFU</abbr></th><th colspan="2">Flow (L/s)</th>
+                    </tr>                    
+                    <tr>
+                        <th>Mostly Flushometer Tanks</th><th>Mostly Flushometer Valves</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="FU" value="enter" onkeyup="convertFUtoQ(FU.value)" /></td>            
+                        <td id="Qt"></td>
+                        <td id="Qv"></td>                                                        
+                    </tr>
+                </table> 
+            </form>
+        <h3>How to Use:</h3>        
+            <ol>
+                <li>Enter WSFU(Water Supply Fixture Unit). The flow in L/s whill appear in both 
+                    cells on the right. One is for systems with mostly flushometer tanks (MFT) and the other 
+                    is for mostly flushometer valves(MFV). The calculation is based on the classic Hunter 
+                    Curve.</li>
+                <li>Notes:<ul>
+                <li>For systems with MFV, the minimum WSFU is 5 or more. Therefore, if you need to 
+                    calculate the flow for WSFU less than 5, use the MFT results. </li>
+                <li>Consult current plumbing code applying to your project for WSFU - Flow relationship.</li></ul></li>
+            </ol>                             
+        </div>  
+        <div style="text-align:right;"><a href="../../indexSI.htm">Return to Main Menu</a></div>                             
+    </div>
+    <div id="rightcolumn">
+        <div id="equipMenu">
+        <b>Product Selection</b>             
+	        <form action="gotoLocation.cgi">
+		        <select id="newLocation" onclick="initForm()">
+                    <option>Select a Catagory</option>
+                    <option value="../../Ads/Valves/valveCO.html">Valves</option>
+                    <option value="../../Ads/Sumppump/SumppumpCO.html">Sump Pumps</option>
+                    <option value="../../Ads/Hangers/hangerCO.html">Pipe Supports</option>
+                    <option value="../../Ads/Highpuritywater/HighpuritywaterCO.html">RO/DI System</option>
+                    <option value="../../Ads/Instrument/instrumentCO.html">Instruments</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Water Treatment></option>
+                    <option value="../../Ads/Pipe/pipeCO.html">Piping</option>
+                    <option value="../../Ads/Waterheaters/WaterheaterCO.html">Water Heaters</option>
+                    <option value="../../Ads/Appurt/appurtCO.html">Specialties</option>
+                    <option value="../../Ads/Fixtures/Manufacturer-Fixture.htm">Fixtures</option>
+                    <option value="../../Ads/Waterpump/pumpCO.html">Boost Pumps</option>
+                    <option value="../../Ads/Fixture_medical/medicalfixturesCO.html">Medical Fixtures</option>
+                    <option value="../../Ads/Storagetanks/tankCO.html">Storage Tanks</option>
+                    <option value="../../Ads/Fixture_food/kitchenfixturesCO.html">Kitchen Equipment</option>
+                    <option value="../../Ads/Drainspecialties/DrainspecialtyCO.html">Drainage Specialties</option>
+                    <option value="../../Ads/ES_EW/emergencyfixtureCO.html">Emergency Equipment</option>
+                    <option value="../../Ads/Intercepters/IntercepterCO.html">Interceptors</option>
+                    <option value="../../Ads/Drinkingfountain/drinkingfountainCO.html">Drinking Fountains</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Septic Tanks</option>
+                    <option value="../../Ads/Medicalgases/medgasCO.html">Medical Gases</option>
+                    <option value="../../Ads/Roofdrains/RoofdrainCO.html">Roof Drains</option>
+                    <option value="../../Ads/Insulation/insulationCO.html">Insulation</option>
+                    <option value="../../Ads/Hengkang.htm">Plastics</option>
+                    <option value="../../Ads/Calculator/Ad-TI00.htm">Calculators</option> 
+		        </select>
+
+	        </form>	
+	        <br />	  
+        <b><a target="_blank"href="../../Ads/Manufacturers.htm">Manufacturers</a></b> 
+		
+        </div>    
+    </div>
+    <div id="footer">
+        <hr style="width:100%;color:blue;height:4px" />
+        <ul class="nav">
+  		    <li><a href="../../Reference/Terms.htm" target="main">Terms of Use</a></li>
+  		    <li><a href="../../Reference/Legal.htm" target="main">Legal Issues</a></li>
+  		    <li><a href="../../Reference/Privacy.htm" target="main">Privacy Policy</a></li>	  		
+	    </ul>
+          <div align="center">EngineerMate since 2005</div>   
+        <script type="text/javascript" src="http://kit.hichina.com/sitemanager/counter.asp?username=ufe471"></script>     
+    </div>
+    </div>
+</body>
+</html>

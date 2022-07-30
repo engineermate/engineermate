@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sizing SI Water Heaters</title>
+    <link href="../../StyleSheetSI.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        td {text-align:center;}
+    </style>    
+    <script src="../../menu.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="container">
+    <div id="header">     	
+        <ul class="nav">
+  		    <li><a href="../../Reference/Contact.htm" target="_blank">Contact</a></li>
+  		    <li><a href="../../Reference/Products.htm" runat="server">Products</a></li>
+  		    <li><a href="../../Reference/Services.htm" runat="server">Services</a></li>
+  		    <li><a href="../../Reference/About.htm" target="HTMLPage">About Us</a></li>
+  		    <li><a id="A1" href="../../indexSI.htm" runat="server">Home</a></li>		  		
+	    </ul>
+        <div><img src="../../headerdesign.jpg" alt="工程师之友" /></div></div>
+    <div id="leftcolumn">
+    ****
+    </div>
+    <div id="midcolumn">
+        <h3>Water Supply</h3>
+        <h1>Sizing Semi-Instantaneous Water Heaters</h1>
+            <h3>Step 1 - Determine the total fixture unit load</h3>
+            <p>Determine the total fixture unit load for all the fixtures serviced by your water heater application using the <a target="_blank" href="http://www.armstronginternational.com/files/products/wheaters/pdf/sizing%20chart.pdf">Fixture Units Table</a>. 
+                The following table shows an example for a college dormitory.</p>
+            <table width="100%">
+                <tr><th>No. of Fixtures</th><th>Type of Fix. </th><th>Fix. Unit</th><th>Demand Fix. Unit</th></tr>
+                <tr><td>150</td><td>Private Lavatory</td><td>.75</td><td>113</td></tr>
+                <tr><td>120</td><td>Private Shower</td><td>1.5</td><td>180</td></tr>
+                <tr><td>20</td><td>Slop Basin</td><td>2.5</td><td>50</td></tr>
+                <tr><td>8</td><td>Clothes Washer</td><td>2.0</td><td>16</td></tr>
+                <tr><td colspan="3">Total Fixture Units:</td><td>359</td></tr>
+            </table>    
+            <h3>Step 2 - The Revised Hunter Curves</h3>
+            <p>The original Hunter Curves were revised by ASHRAE (Figures 1 and 2) by grouping 
+                buildings based on their usage with type A, B, C and D. It is widely used in 
+                selecting semi-instantaneous water heaters.</p>
+                <table width="50%" class="right">
+                    <tr><td><a target="_blank" href="pics/HunterR1SI.jpg"><img src="pics/HunterR1SI.jpg" style="width:100%;"alt="Hunter Curve 1 "/</a></td></tr>
+                    <tr><td><center>Figure 1. Revised Hunter Curve </center></td></tr>
+                    <tr><td><a target="_blank" href="pics/HunterR2SI.jpg"><img src="pics/HunterR2SI.jpg" style="width:100%;" alt="Hunter Curve 2"/></a></td></tr>
+                    <tr><td><center>Figure 2. Revised Hunter Curve <br />Enlarged</center></td></tr>            
+                </table>
+            <h3>Step 3 - Select the proper water heater/water temperature controller</h3>
+            <p>Refer to the modified Hunter Curves in Figure 1 and Figure 2. Curve B represents dormitories. Enter the graph from the bottom at 359 fixture units and go up to curve B. Then move to the left horizontally to read approximately 3.8 L/s of hot water capacity required.</p>
+            <p>Note: Remember to add any constant flow capacities, as determined under "Important Note" below, to this 3.8 L/s gpm.</p>
+
+            <h3>Important Note</h3>   
+            <p>Special consideration should be given to applications involving periodic use of gang showers, process equipment, laundry machine etc., as may occur in field houses, gymnasiums, factories, hospitals, etc. Because these applications could have all equipment on at the same time, their total hot water capacity should be determined and then added to the maximum hot water demand as read from the  modified Hunter Curves. Use the following formula to determine total hot water capacity needed for these applications when final water temperatures are lower than that of the water heater.</p>
+
+            <div class="formula">(B-C)/(H-C) x (Total water flow from all gang shower heads in gpm) = Hot water needed (gpm)</div>
+            <div class="formexp">Where:<br />
+                B = Blended water temperature out of the fixture <br />
+                H = Hot water temperature to the fixture <br />
+                C = Cold water temperature to the fixture
+            </div>
+            <p>Source: <a target="_blank" href="http://www.armstronginternational.com">Armstrong International</a></p>
+            <p>Use <a target="_blank" href="HWmixing.htm">Hot Water Mixing calculator</a> to calculate the percentage of hot water for preparing the needed flow with blended water temperature.</p>
+            <h3>On Screen Calculator by EngineerMate</h3>
+            <p>This calculator is for multiple uses:</p>
+            <ul>
+                <li>Different Type of Water Heaters: Volumetric or Semi-Instantaneous</li>
+                <li>Different fuel: Electric, Natural Gas or Steam</li>                
+            </ul>
+            <p>The calculator image is self-explanatory on its functions.</p>
+            <table style="width:100%;">
+                <tr><td><a target="_blank" href="pics/Calculator_WH.gif"><img src="pics/Calculator_WH.gif" style="width:465px;" alt="Water Heater Calculator" /></a></td></tr>
+            </table>
+        <div style="text-align:right;"><a href="../../indexSI.htm">Return to Main Menu</a></div>            
+        </div> 
+    <div id="rightcolumn">
+        <div id="equipMenu">
+        <b>Product Selection</b>             
+	        <form action="gotoLocation.cgi">
+		        <select id="newLocation" onclick="initForm()">
+                    <option>Select a Catagory</option>
+                    <option value="../../../Ads/Valves/valveCO.html">Valves</option>
+                    <option value="../../Ads/Sumppump/SumppumpCO.html">Sump Pumps</option>
+                    <option value="../../Ads/Hangers/hangerCO.html">Pipe Supports</option>
+                    <option value="../../Ads/Highpuritywater/HighpuritywaterCO.html">RO/DI System</option>
+                    <option value="../../Ads/Instrument/instrumentCO.html">Instruments</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Water Treatment></option>
+                    <option value="../../Ads/Pipe/pipeCO.html">Piping</option>
+                    <option value="../../Ads/Waterheaters/WaterheaterCO.html">Water Heaters</option>
+                    <option value="../../Ads/Appurt/appurtCO.html">Specialties</option>
+                    <option value="../../Ads/Fixtures/Manufacturer-Fixture.htm">Fixtures</option>
+                    <option value="../../Ads/Waterpump/pumpCO.html">Boost Pumps</option>
+                    <option value="../../Ads/Fixture_medical/medicalfixturesCO.html">Medical Fixtures</option>
+                    <option value="../../Ads/Storagetanks/tankCO.html">Storage Tanks</option>
+                    <option value="../../Ads/Fixture_food/kitchenfixturesCO.html">Kitchen Equipment</option>
+                    <option value="../../Ads/Drainspecialties/DrainspecialtyCO.html">Drainage Specialties</option>
+                    <option value="../../Ads/ES_EW/emergencyfixtureCO.html">Emergency Equipment</option>
+                    <option value="../../Ads/Intercepters/IntercepterCO.html">Interceptors</option>
+                    <option value="../../Ads/Drinkingfountain/drinkingfountainCO.html">Drinking Fountains</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Septic Tanks</option>
+                    <option value="../../Ads/Medicalgases/medgasCO.html">Medical Gases</option>
+                    <option value="../../Ads/Roofdrains/RoofdrainCO.html">Roof Drains</option>
+                    <option value="../../Ads/Insulation/insulationCO.html">Insulation</option>
+                    <option value="../../Ads/Hengkang.htm">Plastics</option>
+                    <option value="../../Ads/Calculator/Ad-TI00.htm">Calculators</option> 
+		        </select>
+
+	        </form>	
+	        <br />	  
+        <b><a target="_blank"href="../../Ads/Manufacturers.htm">Manufacturers</a></b> 
+		
+        </div>    
+    </div>
+    <div id="footer">
+        <hr style="width:100%;color:blue;height:4px" />
+        <ul class="nav">
+  		    <li><a href="../../Reference/Terms.htm" target="main">Terms of Use</a></li>
+  		    <li><a href="../../Reference/Legal.htm" target="main">Legal Issues</a></li>
+  		    <li><a href="../../Reference/Privacy.htm" target="main">Privacy Policy</a></li>	  		
+	    </ul>
+          <div align="center">EngineerMate since 2005</div>   
+        <script type="text/javascript" src="http://kit.hichina.com/sitemanager/counter.asp?username=ufe471"></script>     
+    </div>
+    </div>
+</body>
+</html>

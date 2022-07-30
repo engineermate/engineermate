@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>HW Mixing</title>
+	
+	<script type="text/javascript" src="CW_HW.js"></script>
+    <link href="../../StyleSheetSI.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        td {text-align:center;}
+    </style>
+    </head>
+<body>
+    <div id="container">
+    <div id="header">     	
+        <ul class="nav">
+  		    <li><a href="../../Reference/Contact.htm" target="main">联系我们</a></li>
+  		    <li><a href="../../Reference/Products.htm"  target="main">产品</a></li>
+  		    <li><a href="../../Reference/Services.htm"  target="main">服务</a></li>
+  		    <li><a href="../../Reference/About.htm"  target="main">有关我们</a></li>
+  		    <li><a id="A1" href="../../indexEN.htm"  target="main">主页</a></li>		  		
+	    </ul>
+        <div><img src="../../headerdesign.jpg" alt="工程师之友" /></div></div>
+    <div id="leftcolumn">
+   ****
+    </div> 
+    <div id="midcolumn">	
+        <h3>给水</h3>
+        <h1>热水混合</h1> 
+            <form action="">
+                <table class="center" style="width:100%;" id="hwmix">
+                    <caption>热水混合时冷热水所占的百分比</caption>
+                    <colgroup span="2-4" width="25%" align="center"></colgroup>
+                    <tr>
+                        <th></th><th><abbr title="混合水">MW</abbr></th><th><abbr title="冷水">CW</abbr></th><th><abbr title="热水">HW</abbr></th>
+                    </tr>                    
+                    <tr>
+                        <th>Temperature<br />(&deg;C)</th>
+                        <td><input type="text" id="tw" value="49" onkeyup="hwpercent(tw.value,cw.value,hw.value)" /></td>            
+                        <td><input type="text" id="cw" value="5" onkeyup="hwpercent(tw.value,cw.value,hw.value)" /></td>
+                        <td><input type="text" id="hw" value="60" onkeyup="hwpercent(tw.value,cw.value,hw.value)" /></td>                                                        
+                    </tr>
+                    <tr>
+                        <td>各种水的%</td>
+                        <td id="pm">100</td>            
+                        <td id="pc">20</td>
+                        <td id="ph">80</td>                                                        
+                    </tr>                    
+                </table> 
+             </form> 
+        <h3>用法：</h3>
+        <p>在每个输入框中键入温度，各种水的百分数将显示在最下面的一行内。检查混合水的温度应等于或低于热水温度和等于或高于冷水温度。</p>  
+        <div style="text-align:right;"><a href="../../indexSI.htm">Return to Main Menu</a></div>                                                                  
+    </div>
+    <div id="rightcolumn">
+        <div id="equipMenu">
+        <b>选择样本</b>             
+	        <form action="gotoLocation.cgi">
+		        <select id="newLocation" onclick="initForm()">
+                    <option>选择类别</option>
+                    <option value="../../Ads/Valves/valveCO.html">阀门</option>
+                    <option value="../../Ads/Sumppump/SumppumpCO.html">潜水泵</option>
+                    <option value="../../Ads/Hangers/hangerCO.html">管道支架</option>
+                    <option value="../../Ads/Highpuritywater/HighpuritywaterCO.html">纯水系统</option>
+                    <option value="../../Ads/Instrument/instrumentCO.html">仪表</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">水处理</option>
+                    <option value="../../Ads/Pipe/pipeCO.html">管道</option>
+                    <option value="../../Ads/Waterheaters/WaterheaterCO.html">热水器</option>
+                    <option value="../../Ads/Appurt/appurtCO.html">专用设备</option>
+                    <option value="../../Ads/Fixtures/Manufacturer-Fixture.htm">卫生器具</option>
+                    <option value="../../Ads/Waterpump/pumpCO.html">加压泵</option>
+                    <option value="../../Ads/Fixture_medical/medicalfixturesCO.html">医用卫生器具</option>
+                    <option value="../../Ads/Storagetanks/tankCO.html">储水池（箱）</option>
+                    <option value="../../Ads/Fixture_food/kitchenfixturesCO.html">厨房设备</option>
+                    <option value="../../Ads/Drainspecialties/DrainspecialtyCO.html">排水专用设备</option>
+                    <option value="../../Ads/ES_EW/emergencyfixtureCO.html">紧急事故设备</option>
+                    <option value="../../Ads/Intercepters/IntercepterCO.html">截留器</option>
+                    <option value="../../Ads/Drinkingfountain/drinkingfountainCO.html">饮水器</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">化粪池</option>
+                    <option value="../../Ads/Medicalgases/medgasCO.html">医用气体</option>
+                    <option value="../../Ads/Roofdrains/RoofdrainCO.html">雨水斗</option>
+                    <option value="../../Ads/Insulation/insulationCO.html">保温材料</option>
+                    <option value="../../Ads/Hengkang.htm">塑料制品</option>
+                    <option value="../../Ads/Calculator/Ad-TI00.htm">计算器</option> 
+		        </select>
+
+	        </form>	
+	        <br />	  
+        <b><a target="_blank"href="../../Ads/Manufacturers.htm">生产厂商</a></b> 
+		
+        </div>  
+    </div>
+    <div id="footer">
+        <hr style="width:100%;color:blue;height:4px" />
+        <ul class="nav">
+  		    <li><a href="../../Reference/Terms.htm" target="main">使用条件</a></li>
+  		    <li><a href="../../Reference/Legal.htm" target="main">法律问题</a></li>
+  		    <li><a href="../../Reference/Privacy.htm" target="main">隐私条例</a></li>  		
+	    </ul>
+          <div align="center">EngineerMate since 2005</div>   
+        <script type="text/javascript" src="http://kit.hichina.com/sitemanager/counter.asp?username=ufe471"></script>     
+    </div>
+    </div>
+</body>
+</html>

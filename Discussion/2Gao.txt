@@ -1,0 +1,65 @@
+Dear Mr. Gao,
+
+I did not include CA in my book. If you or your colleagues have the membership of ASPE (American Society of Plumbing Engineers), you may have its DATA Books. Chapter 9 in Data Book 3 (2006-2007 edition) is on compressed air. If you go to its Website, www.aspe.org, you may get more information.
+
+Follow the main points below to design your lab system:
+1. Calculate the air demand by lab outlets: 1 SCFM (or Standard cubic meter per minute) per outlet; use diversity factor to get the total demand of the outlets.
+2. Add demand by equipment: Refer to equipment catalog cuts to get the demand in SCFM and pressure.
+3. Use the total and pressure to size the air compressor.
+4. Provide separate system with different pressure requirement or use PRV (pressure reducing valve).
+5. Use charts, tables, or programs in Fluid Mechanics to calculate the pipe size.
+
+I am developing a package for plumbing system design, including lab gases. If you are interested, I will let you know when it is ready for sale.
+
+By the way, in the June issue of ASPE's SPD magazine you may see my fifth article: Sizing Roof Area.
+
+Hope the above will be helpful.
+
+Anjian
+
+
+
+--- On Tue, 3/10/09, Ping Gao <GaoP@cohos-evamy.com> wrote:
+
+> From: Ping Gao <GaoP@cohos-evamy.com>
+> Subject: lab compressed  air
+> To: luaj@yahoo.com
+> Date: Tuesday, March 10, 2009, 5:31 PM
+> Hi MR. LU,
+> 
+>  
+> 
+> I had read your book about US plumbing. It's very
+> useful for the
+> engineers who came from China. I used to work in Beijing
+> for mechanical
+> engineer for 14 years. Now I am working in Canada around
+> one year. We
+> are  working on a university lab, I don't know how to
+> size the
+> compressed air, cause from plumbing handbook I can't
+> find some useful
+> information about lab compressed air.  Could you please
+> give me some
+> suggestion?
+> 
+>  
+> 
+> Best regards
+> 
+>  
+> 
+> Ping Gao 
+> 
+> Mechanical Designer 
+> 
+> COHOS EVAMY
+> integratedesign
+> 
+> 
+> 300, 134 -11 Avenue SE
+> Calgary, AB  T2G 0X5
+> 403.245.5501 T
+> 403.541.5520 D
+> 403.229.0504 F
+> www.cohos-evamy.com <http://www.cohos-evamy.com>

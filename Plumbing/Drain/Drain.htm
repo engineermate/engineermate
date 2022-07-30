@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Drain Sizing</title>
+    <link href="../../StyleSheetEN.css" rel="stylesheet" type="text/css" />
+    <script src="drain.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="container">    
+    <div id="header"> 
+        <ul class="nav">
+  		    <li><a href="../../Reference/Contact.htm" target="_blank">Contact</a></li>
+  		    <li><a href="../../Reference/Products.htm" runat="server">Products</a></li>
+  		    <li><a href="../../Reference/Services.htm" runat="server">Services</a></li>
+  		    <li><a href="../../Reference/About.htm" target="HTMLPage"onclick="getAbout()">About Us</a></li>
+  		    <li><a id="A1" href="../../indexEN.htm" runat="server">Home</a></li>		  		
+	    </ul>
+        <div><img src="../../headerdesign.jpg" alt="工程师之友" /></div></div>
+    <div id="leftcolumn">
+        <h2>Trouble Shooting</h2>
+        <p>Calculations on some pages are dependent on other data file(s) being loaded. In this case, WAITE FOR THE PAGE TO BE FULLY LOADED. Otherwise,
+        calculation may be terminated and error message may appear.</p>
+    </div> 
+    <div id="midcolumn">	
+        <h1>Drain - Horizontals and Stacks</h1>
+            <div>
+            <form action="">
+                <table>
+                    <caption>Building Drain Sizing</caption>
+                    <colgroup span="2" width="20%"></colgroup>
+                    <tr>
+                        <th>Slope</th><th><abbr title="Drain Fixture Units">DFU</abbr></th><th>Recommended Size 
+                        <br />
+                        (inch)</th>
+                        <th>Max DFU</th><th>Margin
+                        <br />
+                        (%)</th>
+                    </tr>
+                    <tr>
+                        <td><select id="slopes" onchange="getBldgDrainSize(DFU.value)">
+                                <option>1"/16' (1:192)</option>
+                                <option selected=1>1"/8' (1:96)</option> 
+                                <option>1"/4' (1:48)</option>
+                                <option>1"/2' (1:24)</option>                                         
+                            </select></td>                    
+
+                        <td><input style="width:80%;" type="text" id="DFU" value="100" onkeyup="getBldgDrainSize(DFU.value)" /></td>            
+                        <!--<td><select id="bldgds" >
+                            </select>
+                        </td>
+                        -->
+                        <td id="dd"></td>
+                        <td id="DFUm"></td>   
+                        <td id="margin"></td>                                                         
+                    </tr>
+                </table>  
+        <h3>How to Use:</h3>        
+            <ol>
+                <li>Select slope. The default is (1"/8' or 1:96).</li>
+                <li>Enter 
+                    <abbr title="Drainage Fixture Unit">DFU.</abbr></li>
+                <li>The recommended building drain size will show on the right.</li>
+                <li>The maximum DFU that the recommended size can take and the margin, or safety 
+                    factor, will also show.</li>
+                <li>Note: Since slopes are dependent on diameter, e.g., if d&lt;4&quot;, the minimum slope 
+                    shall be 1&quot;/4&#39; (or 1/4 inch per foot). Therefore, when you select slope as 
+                    1&quot;/8&#39;,no matter how small the DFU you entered is , the recommended pipe size will 
+                    be 4&quot;. On the othe hand, flow from small DFU may not be fast enough reach 
+                    th 
+                    self-cleaning velocity. Thus, you may have to chose a smaller diameter.</li>
+                <li>Refer to plumbing code applicable to your project for minimum slope of a given 
+                    size drain.</li>                                      
+            </ol>    
+                <ta
+				ble>
+                    <caption>Branches Connecting to Stacks</caption>                
+                    <colgroup><col span="2" width="20%" /></colgroup>
+                    <tr>
+                        <th>DFU</th><th>Recommended Drain Size (inch)</th><th>Max DFU</th><th>Margin                         <br />
+                        (%)</th>
+                    </tr>
+                    <tr>
+                        <td><input style="width:80%;" type="text" id="DFUh" value="enter" onkeyup="getDrainSize(DFUh.value)" /></td>            
+                        <td id="dhd"></td>   
+                        <td id="DFUmh"></td>                                   
+                        <td id="marginh"></td>                                          
+                    </tr>
+                </table>                            
+            </form>
+            </div>            
+            <p><b>Warning! The above calculators are for your convenience only</b>. 
+               Be sure to check your local plumbing code in use.
+            </p> 
+            
+             
+                <table width="100%">
+                    <caption>Stack Sizing</caption>                
+                    <colgroup><col span="2" width="20%" </colgroup>
+                    <tr>
+                        <th>Stack intervals</th><th>DFU</th><th>Recommended Drain Size (inch)</th><th>Max DFU</th><th>Margin                         <br />
+                        (%)</th>
+                    </tr>
+                    <tr>
+                        <td><select id="Nint" onchange="getStackSize(Nint.value,DFUs.value)">
+                                <option>1</option>
+                                <option>2 & 3</option> 
+                                <option>4 or more</option>                                     
+                            </select></td>  
+                        <td><input style="width:80%;" type="text" id="DFUs" value="10" onkeyup="getStackSize(Nint.value,DFUs.value)" /></td>            
+                        <td id="dsd"></td>   
+                        <td id="DFUms"></td>                                   
+                        <td id="margins"></td>                                          
+                    </tr>
+                </table>             
+                            
+        <h3>PlumAL can do more:</h3>
+            <ul>                          
+                <li>EngineerMate&#39;s PlumAL provide <abbr title="User Defined Functions">UDF</abbr>'s, spanning various aspects in plumbing. These 
+                    fucntions can be used in Excel and make design &amp; calculation of plumbing system 
+                    efficiently, systematically, accurately and scientifically.</li>
+                           
+            </ul>
+         <h3>More Reading:</h3>
+            <ul>
+                <li>IPC - <a href="http://www.iccsafe.org/">International Plumbing Code</a></li>
+                <li>NSPC - <a href="http://www.phccweb.org/">National Standard Plumbing Code</a></li>
+                <li>UPC - <a href="http://www.iapmo.org/">Uniform Plumbing Code</a></li>
+            </ul>
+         <div style="text-align:right;"><a href="../../indexEN.htm">Return to Main Menu</a></div>           
+    </div>    
+    <div id="rightcolumn">
+        <div id="equipMenu">
+        <b>Product Selection</b>             
+	        <form action="gotoLocation.cgi">
+		        <select id="newLocation" onclick="initForm()">
+                    <option>Select a Catagory</option>
+                    <option value="../../Ads/Valves/valveCO.html">Valves</option>
+                    <option value="../../Ads/Sumppump/SumppumpCO.html">Sump Pumps</option>
+                    <option value="../../Ads/Hangers/hangerCO.html">Pipe Supports</option>
+                    <option value="../../Ads/Highpuritywater/HighpuritywaterCO.html">RO/DI System</option>
+                    <option value="../../Ads/Instrument/instrumentCO.html">Instruments</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Water Treatment></option>
+                    <option value="../../Ads/Pipe/pipeCO.html">Piping</option>
+                    <option value="../../Ads/Waterheaters/WaterheaterCO.html">Water Heaters</option>
+                    <option value="../../Ads/Appurt/appurtCO.html">Specialties</option>
+                    <option value="../../Ads/Fixtures/Manufacturer-Fixture.htm">Fixtures</option>
+                    <option value="../../Ads/Waterpump/pumpCO.html">Boost Pumps</option>
+                    <option value="../../Ads/Fixture_medical/medicalfixturesCO.html">Medical Fixtures</option>
+                    <option value="../../Ads/Storagetanks/tankCO.html">Storage Tanks</option>
+                    <option value="../../Ads/Fixture_food/kitchenfixturesCO.html">Kitchen Equipment</option>
+                    <option value="../../Ads/Drainspecialties/DrainspecialtyCO.html">Drainage Specialties</option>
+                    <option value="../../Ads/ES_EW/emergencyfixtureCO.html">Emergency Equipment</option>
+                    <option value="../../Ads/Intercepters/IntercepterCO.html">Interceptors</option>
+                    <option value="../../Ads/Drinkingfountain/drinkingfountainCO.html">Drinking Fountains</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Septic Tanks</option>
+                    <option value="../../Ads/Medicalgases/medgasCO.html">Medical Gases</option>
+                    <option value="../../Ads/Roofdrains/RoofdrainCO.html">Roof Drains</option>
+                    <option value="../../Ads/Insulation/insulationCO.html">Insulation</option>
+                    <option value="../../Ads/Hengkang.htm">Plastics</option>
+                    <option value="../../Ads/Calculator/Ad-TI00.htm">Calculators</option> 
+		        </select>
+
+
+	        </form>	
+	        <br />	  
+        <b><a target="_blank"href="../../Ads/Manufacturers.htm">Manufacturers</a></b> 
+		
+        </div>    
+    </div>
+    <div id="footer">
+        <hr style="width:100%;color:blue;height:4px" />
+        <ul class="nav">
+  		    <li><a href="../../Reference/Terms.htm" target="main">Terms of Use</a></li>
+  		    <li><a href="../../Reference/Legal.htm" target="main">Legal Issues</a></li>
+  		    <li><a href="../../Reference/Privacy.htm" target="main">Privacy Policy</a></li>  		
+	    </ul>
+          <div align="center">EngineerMate since 2005</div>   
+        <script type="text/javascript" src="http://kit.hichina.com/sitemanager/counter.asp?username=ufe471"></script>    
+    </div>
+    </div>
+</body>
+</html>

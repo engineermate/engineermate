@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Gravity Pipe Calc</title>
+    <link href="../StyleSheet.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="GravityPiping.js"></script>
+</head>
+<body>
+    <div id="container">
+    <div id="header">     	
+        <ul class="nav">
+  		    <li><a href="mailto:alu@yahoo.com" target="main">Contact</a></li>
+  		    <li><a href="../Reference/Products.htm"  target="main">Products</a></li>
+  		    <li><a href="../Reference/Services.htm"  target="main">Services</a></li>
+  		    <li><a href="../Reference/About.html"  target="main">About Us</a></li>
+  		    <li><a id="A1" href="../index.htm"  target="main">Home</a></li>			  		
+	    </ul>
+        <div><img src="../headerdesign.jpg" alt="工程师之友" /></div>
+  </div>
+<div id="leftcolumn">
+	    <div id="menuEN">
+	            <center><h3>MAIN MENU</h3></center>
+
+            <div>
+            <a href="menu1.html"  class="menuLink">General Calculations</a>
+                <ul class="menu" id="menu1">
+	                <li> <a href="units.html" target="_top">Unit Conversion</a></li>
+	                <li><a href="GeneralHydraulics.htm">General Hydraulics</a></li> 
+      	            <li><a href="pipedata.html">Di and Equiv Length</a></li>		        
+      	        </ul>
+            </div>
+            <div>
+            <a href="menu2.html"  class="menuLink">Engineering Economics</a>
+                <ul class="menu" id="menu2">      
+	                <li><a href="../Documents\EngEco\EngEco-Basics.aspx">Basics</a></li>
+      	            <li><a href="../Documents\EngEco\EngEco-Evaluation.aspx">Evaluation</a></li>
+      	            <li><a href="../Documents\EngEco\EngEco-Decision.aspx">Decision Making</a></li>
+      	            <li><a href="../Documents\EngEco\EngEco-Equipment.aspx">Equipment</a></li>	        
+      	        </ul>
+            </div>
+            <div>
+            <a href="menu3.html"  class="menuLink">Hydraulics</a>
+                <ul class="menu" id="menu3">
+      	            <li><a href="AnyFluid.htm">Any Fluids</a></li>
+      	            <li><a href="SimplePipeline.htm">Simple Pipeline</a></li>
+      	            <li><a href="BranchCalc.htm">Branch System</a></li>
+      	            <li><a href="LoopCalc.htm">Loop System</a></li>
+      	            <li><a href="GravityPiping.htm">Gravity Flow </a></li>
+      	            <li><a href="Profile.htm">Profile</a></li>
+      	            <li><a href="FlowTest.htm">Flow Test</a></li>
+      	            <li><a href="CvConversion.htm">Cv Conversion</a></li>
+                </ul>
+            </div>
+            <div>
+            <a href="menu4.html"  class="menuLink">Plumbing</a>
+                <ul class="menu" id="menu4">	      
+                    <li><a href="../Plumbing/PlumbingIndex.htm">Plumbing Index</a></li>	        
+      	        </ul>
+            </div>
+            <div>
+            <a href="menu5.html" class="menuLink">Programming/Tools</a>
+                <ul class="menu" id="menu5">      
+      	            <li><a href="../documents/Programming/Tools.htm">Tools </a></li>
+      	            <li><a href="../documents/Programming/Programming.htm">Programming</a></li>	        
+      	        </ul>
+            </div>
+            <div>
+            <a href="menu6.html" class="menuLink">Library</a>
+                <ul class="menu" id="menu6">      
+      	            <li><a href="../documents/library/Websites-Organizations.aspx">Organizations</a></li>
+      	            <li><a href="../documents/library/Manufacturers.htm">Manufacturers</a></li>
+      	            <li><a href="../documents/library/Dictionaries.aspx">Technical Terms</a></li>
+      	            <li><a href="../documents/library/Term-plbg-EnCn.aspx" >English-Chinese Terms</a></li>
+      	            <li><a href="../documents/library/Articleindex.htm"  >Articles</a></li>	        
+      	        </ul>
+            </div>
+            <div>
+            <a href="menu7.html" class="menuLink">News</a>
+                <ul class="menu" id="menu7">	
+	                <li><a target="_parent" href="../news/news.htm">News</a></li>
+                </ul>
+            </div>
+            <div>
+            <a href="menu8.html" class="menuLink">Learning Chinese</a>
+                <ul class="menu" id="menu8">
+      	            <li><a href="../indexCN.htm">工程师之友(Chinese)</a></li>
+      	            <li><a href="../Leisure/LeisureIndex.htm">休闲保健（Leisure）</a></li>	        
+	            </ul>
+            </div>
+	    </div>    
+    </div>    
+    <div id="midcolumn">
+	    <h2>Gravity Pipeline Design</h2> 
+        <h3>Manning Formula:</h3>      
+        <p>The popular empirical equation for calculating gravity flow is 
+            <a href="img_GravityPiping/ManningFormulaV.htm">ManningFormula</a>.</p>
+        <h3>Calculating Flow:</h3>  
+        <p>For open channels and conduits other than circular, use hydraulic radius, R, directly in Manning formula:  
+            <a href="img_GravityPiping/ManningFormulaQ.htm">ManningFormula</a>.</p> 
+                                     
+        <h3>Calculator No.1 - Flow in Partial Full Pipes:</h3>         
+        <p>Flow in partial full pipes can be calculated with the following tables by 
+            entering n, D, h/D and S directly, where n is the ratio of wate depth to pipe diameter, D is pipe diameter in ft and S is slope. Other hydraulic elements are also listed for reference. </p>
+    <form action="">
+     
+        <table width="100%" id="manning">
+            <caption>Calculator No.1 Flow/velocity in gravity piping  (n, h/D and S are pre-entered for convenience)</caption>           
+            <colgroup span="4" align="center"></colgroup>
+            <tr>
+                <th><abbr title="roughness">n</abbr></th><th>D (in)</th><th><abbr title="water depth to pipe diameter">h/D</abbr> (0-1)</th>
+                <th><abbr title="slope in decimal">S</abbr> (ft/ft)</th>
+            </tr>
+            <tr>
+                <td><input type="text"id="Mann_N" value="0.015" onkeyup="flow_Mann(Mann_N.value,Mann_D.value,Mann_hD.value,Mann_S.value)"/></td>
+                <td><input type="text"id="Mann_D" onkeyup="flow_Mann(Mann_N.value,Mann_D.value,Mann_hD.value,Mann_S.value)"/></td> 
+                <td><input type="text"id="Mann_hD" value="0.5" onkeyup="flow_Mann(Mann_N.value,Mann_D.value,Mann_hD.value,Mann_S.value)"/></td> 
+                <td><input type="text"id="Mann_S" value="0.01" onkeyup="flow_Mann(Mann_N.value,Mann_D.value,Mann_hD.value,Mann_S.value)"/></td>                                            
+            </tr>
+            <tr>
+                <th>q(cf/s)</th><th>q(gpm)</th><th>V(ft/s)</th><th><abbr title="hydraulic radius">Rh</abbr>(ft)</th>
+            </tr>            
+            <tr>
+                <td id="Mann_cfs"></td><td id="Mann_gpm"></td><td id="Mann_v_here"></td><td id="Mann_Rh_here"></td>
+            </tr>    
+        </table><br />
+        
+        <h3>Calculator No.2 - Diameter in Full Pipes:</h3>         
+        <p>Diameter required for pipes flowing in full can be calculated with Calculator No.2 by 
+            entering n, Q and S directly. This is convenient for calculating storm drain in plumbing engineering when flow is known.</p>        
+        <table width="100%" id="nanningD">
+            <caption>Calculator No.2 Diameter of gravity piping flowing in full</caption>           
+            <colgroup span="3" align="center"></colgroup>
+            <tr>
+                <th><abbr title="roughness">n</abbr></th><th>Q (gpm)</th><th><abbr title="slope in decimal">S</abbr> (ft/ft)</th>
+            </tr>
+            <tr>
+                <td><input type="text"id="MannD_N" value="0.015" onkeyup="dia_Mann(MannD_N.value,MannD_q.value,MannD_S.value)"/></td>
+                <td><input type="text"id="MannD_q" onkeyup="dia_Mann(MannD_N.value,MannD_q.value,MannD_S.value)"/></td> 
+                <td><input type="text"id="MannD_S" value="0.01" onkeyup="dia_Mann(MannD_N.value,MannD_q.value,MannD_S.value)"/></td>                                            
+            </tr>
+            <tr>
+                <th>D(in)</th><th>q(cf/s)</th><th>V(ft/s)</th>
+            </tr>            
+            <tr>
+                <td id="MannD_dia"></td><td id="MannD_cfs"></td><td id="MannD_v"></td>
+            </tr>    
+        </table><br />                                
+    </form>
+    <h4>More Reading</h4>  
+    <p>For more reading on Manning's Formula and storm drain system design, see "<a href="../English_Lerning/Lesson15.htm">Storm Drain System Design (4) - Horizontal Pipe Sizing</a>".</p>
+
+    </div> 
+    <div id="rightcolumn">
+        <div id="equipMenu">
+        <b>Product Selection</b>             
+	        <form action="gotoLocation.cgi">
+		        <select id="newLocation" onclick="initForm()">
+                    <option>Select a Catagory</option>
+                    <option value="../Ads/Valves/valveCO.html">Valves</option>
+                    <option value="../Ads/Sumppump/SumppumpCO.html">Sump Pumps</option>
+                    <option value="../Ads/Hangers/hangerCO.html">Pipe Supports</option>
+                    <option value="../Ads/Highpuritywater/HighpuritywaterCO.html">RO/DI System</option>
+                    <option value="../Ads/Instrument/instrumentCO.html">Instruments</option>
+                    <option value="../Ads/Septictanks/SeptictankCO.html">Water Treatment></option>
+                    <option value="../Ads/Pipe/pipeCO.html">Piping</option>
+                    <option value="../Ads/Waterheaters/WaterheaterCO.html">Water Heaters</option>
+                    <option value="../Ads/Appurt/appurtCO.html">Specialties</option>
+                    <option value="../Ads/Fixtures/Manufacturer-Fixture.htm">Fixtures</option>
+                    <option value="../Ads/Waterpump/pumpCO.html">Boost Pumps</option>
+                    <option value="../Ads/Fixture_medical/medicalfixturesCO.html">Medical Fixtures</option>
+                    <option value="../Ads/Storagetanks/tankCO.html">Storage Tanks</option>
+                    <option value="../Ads/Fixture_food/kitchenfixturesCO.html">Kitchen Equipment</option>
+                    <option value="../Ads/Drainspecialties/DrainspecialtyCO.html">Drainage Specialties</option>
+                    <option value="../Ads/ES_EW/emergencyfixtureCO.html">Emergency Equipment</option>
+                    <option value="../Ads/Intercepters/IntercepterCO.html">Interceptors</option>
+                    <option value="../Ads/Drinkingfountain/drinkingfountainCO.html">Drinking Fountains</option>
+                    <option value="../Ads/Septictanks/SeptictankCO.html">Septic Tanks</option>
+                    <option value="../Ads/Medicalgases/medgasCO.html">Medical Gases</option>
+                    <option value="../Ads/Roofdrains/RoofdrainCO.html">Roof Drains</option>
+                    <option value="../Ads/Insulation/insulationCO.html">Insulation</option>
+                    <option value="../Ads/Hengkang.htm">Plastics</option>
+                    <option value="../Ads/Calculator/Ad-TI00.htm">Calculators</option> 
+		        </select>
+	        </form>	
+	        <br />	  
+        <b><a target="_blank"href="../Ads/Manufacturers.htm">Manufacturers</a></b> 
+		
+        </div>    
+    </div>
+    <div id="footer">
+        <hr style="width:100%;color:blue;height:4px" />
+        <ul class="nav">
+  		    <li><a href="mailto:alu@yahoo.com" target="main">Terms of Use</a></li>
+  		    <li><a href="../Reference/Products.htm" runat="server">Legal Issues</a></li>
+  		    <li><a href="../Reference/services.htm" runat="server">Privacy Policy</a></li>	  		
+	    </ul>
+          <div align="center">&copy;2005-2011  EngineerMate</div>   
+        <script type="text/javascript" src="http://kit.hichina.com/sitemanager/counter.asp?username=ufe471"></script>     
+    </div>    
+    
+         
+    </div>
+</body>
+</html>

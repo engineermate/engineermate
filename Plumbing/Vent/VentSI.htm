@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Venting</title>
+    <link href="../../StyleSheetSI.css" rel="stylesheet" type="text/css" />
+    <script src="VentSI.js" type="text/javascript"></script>    
+</head>
+<body>
+    <div id="container">
+    <div id="header">     	
+        <ul class="nav">
+  		    <li><a href="../../Reference/Contact.htm" target="_blank">Contact</a></li>
+  		    <li><a href="../../Reference/Products.htm" runat="server">Products</a></li>
+  		    <li><a href="../../Reference/Services.htm" runat="server">Services</a></li>
+  		    <li><a href="../../Reference/About.html" target="HTMLPage"onclick="getAbout()">About Us</a></li>
+  		    <li><a id="A1" href="../../indexSI.htm" runat="server">Home</a></li>		  		
+	    </ul>
+        <div><img src="../../headerdesign.jpg" alt="工程师之友" /></div></div>
+    <div id="leftcolumn">
+    ****  
+    </div>
+    <div id="midcolumn">	
+        <h1>Venting</h1>
+        <h2>On Screen Sizing:</h2>
+            <div>
+            <form action="">
+                <table width="100%">
+                    <caption>Venting</caption>
+                    <colgroup><col span="3" width="20%" /></colgroup>
+                    <tr>
+                        <th>Waste Stack Dia (mm)</th><th><abbr title="Drain Fixture Units">DFU</abbr></th><th><abbr title="Total Development Length">TDL</abbr>
+                        <br />
+                        (m)</th><th>Vent Dia 
+                            <br />
+                            (mm)</th>
+                        <th>Max DFU</th><th>Max TDL 
+                        <br />
+                        (m)</th>
+                    </tr>
+                    <tr>
+                        <td><select id="stkds" onchange="getVentSize(DFU.value,TDL.value)">
+                            </select>
+                        </td>
+                        <td><input style="width:80%;" type="text" id="DFU" value="Enter" onkeyup="getVentSize(DFU.value,TDL.value)" onchange="selectStackSize(DFU.value)" /></td>            
+                        <td><input style="width:80%;" type="text" id="TDL" value="Enter" onkeyup="getVentSize(DFU.value,TDL.value)" onchange="selectStackSize(DFU.value)" /></td>
+                        <td id="vd"></td>
+                        <td id="DFUm"></td>   
+                        <td id="TDLm"></td>                                                         
+                    </tr>
+                </table>  
+        <h3>How to Use:</h3>        
+            <ol>
+                <li>Select waste stack size previously sized.</li>
+                <li>Enter DFU.</li>                
+                <li>Enter TDL.</li>
+                <li>The recommended vent diameter will show in the cell.</li>
+                <li>The maximum DFU and TDL for the vent size you selected will show in the last two 
+                    cells.</li>
+                <li>Notes:   
+                    <ul>
+                        <li>Vent stack or stack vent size is dependent on DFU and TDL, but other requirements 
+                            may apply, such as aggregate venting, minimum size of vent terminal, etc.</li>
+                        <li>If cells for Vent Dia, Max DFU and Max TDL are blank, it means that the waste stack size may be too small.</li>     
+                    </ul>
+                </li>                                     
+            </ol>    
+                <table>
+                    <caption>Sump Venting</caption>                
+                    <colgroup><col width="20%"/><col width="20%"/></colgroup>
+                    <tr>
+                        <th>Flow rate (L/s)</th><th><abbr title="Total Development Length">TDL</abbr>(m)</th><th>Vent Dia (mm)</th><th>Max Flow (L/s)</th><th>Max TDL (m)</th>
+                        
+                    </tr>
+                    <tr>
+                        <td><input style="width:80%;" type="text" id="flows" value="enter" onkeydown="loadXMLDoc('../../xml/sumpvents.xml')" onkeyup="getSumpVentSize(flows.value,TDLs.value)" /></td>
+                        <td><input style="width:80%;"  type="text" id="TDLs" value="enter" onkeyup="getSumpVentSize(flows.value,TDLs.value)" /></td>            
+                        <td id="vsd"></td>   
+                        <td id="Qmsp"></td>                                   
+                        <td id="TDLmsp"></td>                                          
+                    </tr>
+                </table>                            
+            </form>
+            </div>            
+        <h3>How to Use:</h3>        
+            <ol>
+                <li>Enter sump pump flow rate.</li>
+                <li>Enter TDL.</li>
+                <li>The recommended vent diameter will show in the cell.</li>
+                <li>The maximum DFU and TDL for the vent size you selected will show in the last two 
+                    cells.</li>                                   
+            </ol> 
+            <p><b>Warning! The above calculators are for your convenience only</b>. 
+               Be sure to check your local plumbing code in use.
+            </p>                  
+        <h3>PlumAL can do more:</h3>
+            <ul>                          
+                <li>EngineerMate&#39;s PlumAL provides more than 70 <abbr title="User Defined Functions">UDF</abbr>'s, spanning various aspects in plumbing. These 
+                    fucntions can be used in Excel and make design &amp; calculation of plumbing system 
+                    efficiently, systematically, accurately and scientifically.</li>
+                           
+            </ul>
+         <h3>More Reading:</h3>
+            Refer to plumbing code for venting system design:<br/>
+            <ul>
+                <li>IPC - <a href="http://www.iccsafe.org/">International Plumbing Code</a></li>
+                <li>NSPC - <a href="http://www.phccweb.org/">National Standard Plumbing Code</a></li>
+                <li>UPC - <a href="http://www.iapmo.org/">Uniform Plumbing Code</a></li>
+            </ul>
+    </div>    
+    <div id="rightcolumn">
+        <div id="equipMenu">
+        <b>Product Selection</b>             
+	        <form action="gotoLocation.cgi">
+		        <select id="newLocation" onclick="initForm()">
+                    <option>Select a Catagory</option>
+                    <option value="../../Ads/Valves/valveCO.html">Valves</option>
+                    <option value="../../Ads/Sumppump/SumppumpCO.html">Sump Pumps</option>
+                    <option value="../../Ads/Hangers/hangerCO.html">Pipe Supports</option>
+                    <option value="../../Ads/Highpuritywater/HighpuritywaterCO.html">RO/DI System</option>
+                    <option value="../../Ads/Instrument/instrumentCO.html">Instruments</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Water Treatment></option>
+                    <option value="../../Ads/Pipe/pipeCO.html">Piping</option>
+                    <option value="../../Ads/Waterheaters/WaterheaterCO.html">Water Heaters</option>
+                    <option value="../../Ads/Appurt/appurtCO.html">Specialties</option>
+                    <option value="../../Ads/Fixtures/Manufacturer-Fixture.htm">Fixtures</option>
+                    <option value="../../Ads/Waterpump/pumpCO.html">Boost Pumps</option>
+                    <option value="../../Ads/Fixture_medical/medicalfixturesCO.html">Medical Fixtures</option>
+                    <option value="../../Ads/Storagetanks/tankCO.html">Storage Tanks</option>
+                    <option value="../../Ads/Fixture_food/kitchenfixturesCO.html">Kitchen Equipment</option>
+                    <option value="../../Ads/Drainspecialties/DrainspecialtyCO.html">Drainage Specialties</option>
+                    <option value="../../Ads/ES_EW/emergencyfixtureCO.html">Emergency Equipment</option>
+                    <option value="../../Ads/Intercepters/IntercepterCO.html">Interceptors</option>
+                    <option value="../../Ads/Drinkingfountain/drinkingfountainCO.html">Drinking Fountains</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Septic Tanks</option>
+                    <option value="../../Ads/Medicalgases/medgasCO.html">Medical Gases</option>
+                    <option value="../../Ads/Roofdrains/RoofdrainCO.html">Roof Drains</option>
+                    <option value="../../Ads/Insulation/insulationCO.html">Insulation</option>
+                    <option value="../../Ads/Hengkang.htm">Plastics</option>
+                    <option value="../../Ads/Calculator/Ad-TI00.htm">Calculators</option> 
+		        </select>
+
+	        </form>	
+	        <br />	  
+        <b><a target="_blank"href="../../Ads/Manufacturers.htm">Manufacturers</a></b> 
+		
+        </div>    
+    </div>
+    <div id="footer">
+        <hr style="width:100%;color:blue;height:4px" />
+        <ul class="nav">
+  		    <li><a href="../../Reference/Terms.htm" target="main">Terms of Use</a></li>
+  		    <li><a href="../../Reference/Legal.htm" target="main">Legal Issues</a></li>
+  		    <li><a href="../../Reference/Privacy.htm" target="main">Privacy Policy</a></li>	  		
+	    </ul>
+          <div align="center">EngineerMate since 2005</div>   
+        <script type="text/javascript" src="http://kit.hichina.com/sitemanager/counter.asp?username=ufe471"></script>     
+    </div>
+    </div>
+</body>
+</html>

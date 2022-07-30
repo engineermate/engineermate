@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>General Hydraulic Calc</title>
+    <link href="../../StyleSheetSI.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="generalhydraulicsSI.js"></script>
+</head>
+<body>
+    <div id="container">
+    <div id="header">     	
+        <ul class="nav">
+  		    <li><a href="../../Reference/Contact.htm" target="_blank">Contact</a></li>
+  		    <li><a href="../../Reference/Products.htm"  target="main">Products</a></li>
+  		    <li><a href="../../Reference/Services.htm"  target="main">Services</a></li>
+  		    <li><a href="../../Reference/About.htm"  target="main">About Us</a></li>
+  		    <li><a id="A1" href="../../indexSI.htm"  target="main">Home</a></li>		  		
+	    </ul>
+        <div><img src="../../headerdesign.jpg" alt="工程师之友" /></div>
+  </div>
+<div id="leftcolumn">
+        <h2>Hidden Notations</h2>  
+        <p>Please be noted: Some abbreviations are hidden. You may move your cusor over them and see the description.</p>  
+        <h2>Calculators with More Functions</h2>
+        <ul>
+            <li>Simple line Calculator Using Hazen-Williams Formula</li>
+            <li>Calculator for All Fluids Using Darcy Formula</li>            
+        </ul> 
+        <h2>Understand Flow Test</h2>  
+        <p>Plumbing and fire protection engineers would ask these questions: 
+        "How much water I can draw from a city water supply?" "How much pressure 
+        I can get?" <a href="../../Hydraulics/FlowTest/UnderstandFlowTest.htm">../More...</a></p>   
+    </div>    
+    <div id="midcolumn">
+    <h2>General Hydraulic Calculations</h2>
+    <form action="">
+        <table width="100%" id="flowrate">
+            <caption>Flow rate in piping flowing in full</caption>        
+            <colgroup span="3" width="15%" align="center"></colgroup>
+            <tr>
+                <th>V(m/s)</th><th width="10%">d(mm)</th><th>q(L/s)</th>
+            </tr>
+            <tr>
+                <td><input type="text"id="velocity" onkeyup="flow(velocity.value,diameter.value)"/></td>
+                <td><input type="text"id="diameter"/ onkeyup="flow(velocity.value,diameter.value)" /></td> 
+                <td id="here"></td>                                                                    
+            </tr>
+        </table> <br /> 
+
+        <table width="100%" id="vel">
+            <caption>Velocity in piping flowing in full</caption>        
+            <colgroup span="3" width="15%" align="center"></colgroup>
+            <tr>
+                <th width="10%">q(L/s)</th><th width="10%">d(mm)</th><th>v(m/s)</th>
+            </tr>
+            <tr>
+                <td><input type="text"id="Q" onkeyup="V(Q.value,D.value)" /></td>
+                <td><input type="text"id="D" onkeyup="V(Q.value,D.value)" /></td> 
+                <td id="v_here"></td>                                           
+            </tr>
+        </table> <br /> 
+      
+        <table width="100%" id="hazen">
+            <caption>Friction loss (Hazen-Williams Formula)</caption>           
+            <colgroup span="4" width="15%" align="center"></colgroup>        
+            <tr>
+                <th><abbr title="Hazen-Williams C">HWC</abbr></th><th>d(mm)</th><th>q(L/s)</th><th>Loss(m/m)</th>
+            </tr>
+            <tr>
+                <td><input type="text"id="fric_c" onkeyup="frictionloss(fric_c.value,fric_d.value,fric_q.value)" /></td>
+                <td><input type="text"id="fric_d" onkeyup="frictionloss(fric_c.value,fric_d.value,fric_q.value)" /></td> 
+                <td><input type="text"id="fric_q" onkeyup="frictionloss(fric_c.value,fric_d.value,fric_q.value)" /></td>                            
+                <td id="fric_here"></td>                            
+            </tr>
+        </table> <br /> 
+     
+        <table width="100%" id="manning">
+            <caption>Flow/velocity in gravity piping (Manning's Formula)</caption>           
+            <colgroup span="4" width="10%" align="center"></colgroup>
+            <tr>
+                <th><abbr title="roughness"><a href="../../Reference/Tables/ManningCoef.htm">N</a></abbr></th><th>D (mm)</th><th><abbr title="water depth to pipe diameter">h/D</abbr> (0-1)</th>
+                <th><abbr title="slope in decimal">S</abbr> (m/m)</th>
+            </tr>
+
+            <tr>
+                <td><input type="text"id="Mann_N" onkeyup="flow_Mann(Mann_N.value,Mann_D.value,Mann_hD.value,Mann_S.value)"/></td>
+                <td><input type="text"id="Mann_D" onkeyup="flow_Mann(Mann_N.value,Mann_D.value,Mann_hD.value,Mann_S.value)"/></td> 
+                <td><input type="text"id="Mann_hD" onkeyup="flow_Mann(Mann_N.value,Mann_D.value,Mann_hD.value,Mann_S.value)"/></td> 
+                <td><input type="text"id="Mann_S" onkeyup="flow_Mann(Mann_N.value,Mann_D.value,Mann_hD.value,Mann_S.value)"/></td>                                            
+                
+            </tr>
+            <tr>
+                <td>q(m3/s)</td><td>q(L/s)</td><td>V(m/s)</td><td><abbr title="hydraulic radius">Rh</abbr>(m)</td>
+            </tr>            
+            <tr>
+                <td id="Mann_m3/s"></td><td id="Mann_L/s"></td><td id="Mann_v_here"></td><td id="Mann_Rh_here"></td>
+            </tr>    
+        </table><br />         
+        <table width="100%" id="qtest">
+            <caption>Flow Test</caption>           
+            <colgroup span="6" width="16%"></colgroup>
+            <tr>
+                <th><abbr title="static pressure">Ps</abbr> (kPa)</th><th><abbr title="residual pressure">Pr</abbr>(kPa)</th><th><abbr title="tested flow">Qt</abbr> (L/s)</th>
+                <th align="right"><abbr title="flow required">Qr</abbr> (L/s)</th><th><abbr title="available pressure">Pa</abbr> (kPa)</th>
+            </tr>
+            <tr>
+                <td><input type="text"id="Pstt" onkeyup="qtest(Pstt.value,Pres.value,Qtst.value,Qreq.value)" /></td>
+                <td><input type="text"id="Pres" onkeyup="qtest(Pstt.value,Pres.value,Qtst.value,Qreq.value)" /></td> 
+                <td><input type="text"id="Qtst" onkeyup="qtest(Pstt.value,Pres.value,Qtst.value,Qreq.value)" /></td> 
+                <td><input type="text"id="Qreq" onkeyup="qtest(Pstt.value,Pres.value,Qtst.value,Qreq.value)" /></td>                                            
+                <td id="Pava"></td>                
+            </tr>
+        </table>                 
+    </form>  
+    </div> 
+    <div id="rightcolumn">
+        <div id="equipMenu">
+        <b>Product Selection</b>             
+	        <form action="gotoLocation.cgi">
+		        <select id="newLocation" onclick="initForm()">
+                    <option>Select a Catagory</option>
+                    <option value="../../Ads/Valves/valveCO.html">Valves</option>
+                    <option value="../../Ads/Sumppump/SumppumpCO.html">Sump Pumps</option>
+                    <option value="../../Ads/Hangers/hangerCO.html">Pipe Supports</option>
+                    <option value="../../Ads/Highpuritywater/HighpuritywaterCO.html">RO/DI System</option>
+                    <option value="../../Ads/Instrument/instrumentCO.html">Instruments</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Water Treatment></option>
+                    <option value="../../Ads/Pipe/pipeCO.html">Piping</option>
+                    <option value="../../Ads/Waterheaters/WaterheaterCO.html">Water Heaters</option>
+                    <option value="../../Ads/Appurt/appurtCO.html">Specialties</option>
+                    <option value="../../Ads/Fixtures/Manufacturer-Fixture.htm">Fixtures</option>
+                    <option value="../../Ads/Waterpump/pumpCO.html">Boost Pumps</option>
+                    <option value="../../Ads/Fixture_medical/medicalfixturesCO.html">Medical Fixtures</option>
+                    <option value="../../Ads/Storagetanks/tankCO.html">Storage Tanks</option>
+                    <option value="../../Ads/Fixture_food/kitchenfixturesCO.html">Kitchen Equipment</option>
+                    <option value="../../Ads/Drainspecialties/DrainspecialtyCO.html">Drainage Specialties</option>
+                    <option value="../../Ads/ES_EW/emergencyfixtureCO.html">Emergency Equipment</option>
+                    <option value="../../Ads/Intercepters/IntercepterCO.html">Interceptors</option>
+                    <option value="../../Ads/Drinkingfountain/drinkingfountainCO.html">Drinking Fountains</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Septic Tanks</option>
+                    <option value="../../Ads/Medicalgases/medgasCO.html">Medical Gases</option>
+                    <option value="../../Ads/Roofdrains/RoofdrainCO.html">Roof Drains</option>
+                    <option value="../../Ads/Insulation/insulationCO.html">Insulation</option>
+                    <option value="../../Ads/Hengkang.htm">Plastics</option>
+                    <option value="../../Ads/Calculator/Ad-TI00.htm">Calculators</option> 
+		        </select>
+
+	        </form>	
+	        <br />	  
+        <b><a target="_blank"href="../../Ads/Manufacturers.htm">Manufacturers</a></b> 
+		
+        </div>    
+    </div>
+    <div id="footer">
+        <hr style="width:100%;color:blue;height:4px" />
+        <ul class="nav">
+  		    <li><a href="../../Reference/Terms.htm" target="main">Terms of Use</a></li>
+  		    <li><a href="../../Reference/Legal.htm" target="main">Legal Issues</a></li>
+  		    <li><a href="../../Reference/Privacy.htm" target="main">Privacy Policy</a></li>  		
+	    </ul>
+          <div align="center">EngineerMate since 2005</div>   
+        <script type="text/javascript" src="http://kit.hichina.com/sitemanager/counter.asp?username=ufe471"></script>      
+    </div>    
+    
+         
+    </div>
+</body>
+</html>

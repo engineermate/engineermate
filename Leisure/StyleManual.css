@@ -1,0 +1,503 @@
+﻿body 
+{  background-image: url('lu01.png');
+   background-repeat:repeat;
+   font-family:verdna,sans-serif;
+   font-size:1.0em;
+}
+#container {
+	/** background-color: #9cd8cd;	**/
+	background-color: white;
+	position: relative;
+	height:auto;
+	width: 850px; 
+	margin-right:auto;
+	margin-left:auto;
+}
+#NotUsedheader 
+{   background-color: #f8f8ff;
+    background-image: url('headbackgroung.gif');
+    background-repeat: no-repeat;
+    background-position: right; 
+    height:80px;   
+    width:100%;
+}
+#header
+{   position:relative;
+    left:0px;
+    height:100px;
+    width:100%;   
+}
+#page
+{   position:relative;
+    margin-right:auto;
+	margin-left:auto;
+    left:0px;
+    background-color: white;
+    width:650px;  
+    margin:0 100px 50px 100px;  
+}
+#toc 
+{
+    height: auto;       
+    position:relative;
+    top:auto;          
+	/** font-size: 1.0em; **/
+    }    
+#textEN 
+{
+    width:510px;    
+    height: auto;       
+    position:relative;
+    top:0px;          
+	/** font-size: 1.0em; **/
+    left: 4px;
+}
+#textCN
+{
+    width:auto;      
+    position:relative;
+    top:auto;
+    left:0px;
+    height:auto;
+	text-align: left;
+    }
+#question 
+{
+    background-color: #f0f8ff;
+    width:auto;      
+    position:relative;
+    top:auto;
+    left:0px;
+    height:auto;
+	text-align: left;
+    }     
+#reference 
+{
+    background-color: #f8f8ff;
+    height: auto;       
+    position:relative;
+    top:auto;          
+	/** font-size: 1.0em; **/
+    } 
+#vocabulary
+{
+    width:514px;     
+    height: auto;       
+    position:relative;
+    top:auto;          
+	 font-size: 1.2em; 
+    }     
+#footer
+{
+    width:100%;
+    clear:both;
+    height:50px;
+	background: #white;
+	font-size:0.86em;
+}
+#rightcolumn
+{
+    background-color: #f0f8ff; 
+    float:right;
+    width:360px;
+    padding-left:10px;
+    padding-right:30px;
+}
+
+/*** List Navigation ****okokokokokokokok **/	
+ul,ol{
+    line-height:1.5em;   
+    font-size:1.0em;
+    }
+ul#nav {
+	list-style-type: none;
+	margin: 0;
+	font-size:1.0em;
+	position: absolute;
+	float:right;
+	top: 5px;
+	right: 0px;
+    width:430px;
+	display:none;
+}
+	
+ul#nav li {
+	display: inline; 
+    	}
+ul#nav li a
+	{   float:right;
+    	background-color: #2B95FF;
+    	border: 1px solid #FFF;
+    	color: white;
+    	font-size: 76%;
+    	text-decoration: none;
+    	text-align: center;
+    	text-transform: uppercase;
+    	letter-spacing: 2px;
+    	padding: 1px 2px;
+    	margin: 0px 2px;
+	}
+ul#nav li a:hover
+	{
+    background-color: #0000CC;
+    border: 1px solid #600;
+	}
+
+/*** List Navigation ****okokokokokokokok **/	
+ul.nav {
+	list-style-type: none;
+	margin: 0;
+	font-size:1.0em;
+	position: relative;
+	float:right;
+	top: 0px;
+	right: 0px;
+    width:380px;
+}
+	
+ul.nav li {
+	display: inline; 
+    	}
+ul.nav li a
+	{   float:right;
+    	background-color: #2B95FF;
+    	border: 1px solid #FFF;
+    	color: white;
+    	font-size: 76%;
+    	text-decoration: none;
+    	text-align: center;
+    	text-transform: uppercase;
+    	letter-spacing: 2px;
+    	padding: 1px 2px;
+    	margin: 0px 2px;
+	}
+ul.nav li a:hover
+	{
+    background-color: #0000CC;
+    border: 1px solid #600;
+	}
+ol.alphau
+{
+    list-style-type:upper-alpha;
+    }
+ul.nodot
+{
+    list-style: none;
+} 
+	   
+/***********************************************************/   
+/***********************************************************/
+/********************************************* Sections ****/
+/***********************************************************/ 
+    							/************ paragraph ****/
+p{ line-height:1.3em;
+    text-indent:2em;            /*** paragraph - dented ****/
+    text-align:left;
+    /*background: #FFFFCC;*/
+	text-decoration: none;
+	margin-top: 0em;
+	margin-bottom:0em;
+	}
+div{ display:table;
+	}
+.note
+{
+    font-size:0.76em;
+    padding-top:0.5em;
+    padding-bottom:1em;
+ }
+p.title
+{   text-indent:0em; 
+    }    				
+.poem { font-family: "楷体","楷体_GB2312";
+    background-image:url(Leisure/images/OldHome.jpg);
+    background-repeat:repeat-y;
+    width:510px;
+    float:inherit;
+	font-size: 1.2em;
+	letter-spacing: 0.5px;
+	line-height:1.2em;
+    position:relative;	
+    margin-left: auto; 
+	margin-right: auto;
+	margin-top: 10px; 
+	margin-bottom: 10px;	
+	text-align: left;
+	padding:20px 20px 20px 20px;
+	}
+.poemQ { font-family: "楷体","楷体_GB2312";
+    background-color: #eeeeff;  
+    /** background-image:url(Leisure/images/HuangTanDong.jpg); **/ 
+    background-image:url("Leisure/images/img_leisure/lu02.png");  
+    background-repeat:repeat;    
+    width:470px;       
+	font-size: 1.1em;
+	letter-spacing: 0.5px;
+	line-height:1.2em;
+    margin-left: auto; 
+	margin-right: auto;
+	margin-top: 10px; 
+	margin-bottom: 10px;		
+	text-align: left;
+	padding:20px 20px 20px 20px;
+	}		
+.poem-yjd {
+	font-family: "楷体","楷体_GB2312";
+    background-image:url(Leisure/images/yjdong.jpg);
+    background-repeat:repeat-y;
+    width:470px;
+    float:inherit;
+	font-size: 1.2em;
+	font-weight:600;
+	letter-spacing: 0.5px;
+	line-height:1.2em;
+    position:relative;	
+    margin-left: auto; 
+	margin-right: auto;
+	margin-top: 10px; 
+	margin-bottom: 10px;	
+	text-align: left;
+	padding:10px 20px 20px 20px;
+	}	
+.poem-pom { font-family: "楷体","楷体_GB2312";
+    background-image:url("Leisure/images/Pomgranite.jpg");
+    background-repeat:repeat; 
+    width:510px;
+	font-size: 1.0em;
+	letter-spacing: 0.5px;
+	line-height:1.1em;
+    margin-left: 25px; 
+	margin-right: 25px;
+	margin-top: 10px; 
+	margin-bottom: 10px;	
+	text-align: left;
+	padding:20px 20px 20px 20px;
+	}		
+.poem-title 
+{   
+    width:470px;      
+    font-size: 1.0em; 
+    font-weight: 700;
+    margin-top:0em;
+    margin-bottom:1em;
+    }
+.poem-sub-title    
+{   
+    width:470px;        
+    /** font-size: 1.0em; **/
+    font-weight: 500;
+    margin-top:1em;
+    margin-bottom:0.5em;   
+    }
+.poem-note 
+{font-family: "宋体","宋体_GB2312";
+    width:470px;     
+    font-size: 0.75em;
+    font-weight: 500;
+    line-height: 1.2em;
+    margin-right: 50px;
+    margin-top:0em;
+    margin-bottom: 1em;
+    background-image: url('../../bkg.jpg');
+}     
+.formula {
+	font-size: 1.0em;
+	font-family:Cambria;
+	font-style:italic;
+	line-height:1.8em;
+	letter-spacing: 0.5px;
+	margin-left: 0em;
+	display:block;			/*** this code is for text-align working properly. (got from webside Q & A ****/
+	text-align: center;
+	padding: 0.5em 0 0.5em 0;
+	}
+.formexp { margin-left: 6em;
+	font-size: 1em;
+	text-align: left;
+	text-indent: -3.5em;
+    height: auto;
+}
+.textbox
+{   border-style: solid;
+    border-color: #ccccda;
+    border-width: 1px;
+    font-size:0.86em;
+    line-height:1.2em;
+    width:33%;
+    margin:0em;
+    float:right;
+	padding:1em;	
+}	    
+
+
+/* Number in Circle */
+.NoC{
+    border-radius: 50%;
+    /*behavior: url(PIE.htc);  remove if you don't care about IE8 */
+
+    width: 1em;
+    height: 1em;
+    padding: 0.2em;
+
+    background: #fff;
+    border: 0.05em solid #666;
+    color: #666;
+    text-align: center;
+
+    font: 1em Arial, sans-serif;
+}  
+    			/************ Headings ****/
+h1{  
+	font-size: 1.6em;
+    line-height:1.2em;	
+	text-decoration: none;    
+    color: #800000;
+	}
+h2 { font-size: 1.4em;
+    line-height:1.2em;     
+	margin: 0.5em 0em 0.5em 0em;
+	font-weight: bold;
+	color: #800000;
+	}
+h3 { font-size: 1.2em;
+    line-height:1.2em;     
+	margin: 0.5em 0em 0.5em 0em;
+	color: #800000;
+    width: auto;
+}
+h4 { font-size: 1.0em;
+    line-height:1.2em;
+	margin: 0.5em 0em 0.5em 0em;
+	font-weight: bold;
+	color: #800000;
+	text-align: left;
+	width:auto;
+}
+h5 { font-size: 1.0em;          /** OK **/
+    line-height:1.2em;
+	margin: 0.5em 0em 0.5em 0em;
+	font-weight: bold;
+	color: black;
+	text-align: left;
+	width:auto;
+}
+h6 { font-size: 0.9em;          /** OK **/
+    line-height:1.0em;
+	margin: 0.5em 0em 0.5em 0em;
+	color: black;
+	text-align: left;
+	width:auto;
+}
+table { /* margin:10px 20px;*/
+        table-layout:fixed;
+	    page-break-inside:avoid;
+    	border-collapse:collapse;
+    	border:0 solid ;
+    	border-top: 2px; 
+        border-bottom: 2px;       
+    	border-style: outset;
+    	border-color: #000;
+    	border-spacing: 0px; /*border: 2px solid;*/ /*table-layout: auto;*/ 
+    	margin:1em 0em 0.5em 0em;
+        font-size: 0.76em;    	  	
+    	/* text-align: center; */ 
+    	color: black;
+        /* background-color:#daf3ff; */       
+    	background-color: White;
+        empty-cells: show;  
+	margin-right:auto;
+	margin-left:auto;         
+	}
+table.noframe {
+    	border-top: 0; 
+        border-bottom: 0;
+    }	
+col.al {text-align:left;}
+col.ar {text-align:right;}
+col.ac {text-align:center;}	
+
+tfoot{border: 1px solid #c0c0c0; 
+      border-top: 2px double black; 
+      border-spacing:2px;
+      padding : 0.2em 0.5em 0.2em 0.5em;  
+      font-size:0.86em;         
+} 
+
+table.left
+    {
+    text-align:left;
+    margin-right:0.5em;
+    }
+table.right
+    {
+    text-align: right;
+    margin-left:0.5em;
+    }
+table.center
+    {         
+    /*border-collapse: separate;
+    border-style: solid;
+    border-width: 1px;
+    border-color: inherit;
+    table-layout: auto;
+    font-size: 0.86em;
+
+    color: black;
+    empty-cells: show;
+    border-spacing: 0px;
+    background-color:#FFFFCC;*/
+    text-align: center;    
+    }
+   	
+th  { border: 1px solid #c0c0c0; 
+      /*border-top: 1px solid black;  */     
+      border-bottom: 3px double black; 
+      padding : 0.2em 0.5em 0.5em 0.5em; 
+	  background-color:Azure;
+    } 
+td  { border: 1px double #c0c0c0; 
+      padding: 0.2em 0.5em 0.3em 0.5em; 
+    } 
+/* the following is copied from Internet as CSS3 for testing */ 
+tr td:nth-child(2) { /* I don't think they are 0 based */    text-align: left; } 
+
+tr.boldbot
+    { 
+    border-bottom: 1px solid  #c0c0c0;
+    } 
+    
+img
+	{
+    height:auto;
+    width:auto;
+    margin: 0px;
+  	border: 0px solid #0000ff;    
+    padding:1em 0 1em 0; 
+    } 
+img.left
+    { 
+  	float: left;        
+    }
+img.right
+    { 
+  	float: right;         
+    } 
+caption
+	{padding-top:1em;
+	}    
+figcaption
+	{font-size:0.76em;
+	padding-bottom:1em;
+	}
+div.img
+    {
+    padding:1em 0 1em 0;    
+    }	
+sup 
+    {font-size:0.7em;
+    } 
+sub 
+    {font-size:0.7em;
+    }
+    
+@media print { .noprint {display:none; } } 

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Branch Calc</title>
+	
+	<script type="text/javascript" src="../../GeneralCalc/Units/units.js"></script>
+    <link href="../../StyleSheetEN.css" rel="stylesheet" type="text/css" />
+
+    </head>
+<body>
+    <div id="container">
+    <div id="header">     	
+        <ul class="nav">
+  		    <li><a href="../../Reference/Contact.htm" target="main">Contact</a></li>
+  		    <li><a href="../../Reference/Products.htm"  target="main">Products</a></li>
+  		    <li><a href="../../Reference/Services.htm"  target="main">Services</a></li>
+  		    <li><a href="../../Reference/About.htm"  target="main">About Us</a></li>
+  		    <li><a id="A1" href="../../index.htm"  target="main">Home</a></li>		  		
+	    </ul>
+        <div><img src="../../headerdesign.jpg" alt="工程师之友" /></div></div>
+    <div id="leftcolumn">
+    ***** 
+    </div>    
+    <div id="midcolumn">
+	    <h2>Branch System Calculations</h2> 
+        <h3>For Building Plumbing Systems</h3>
+        <h4>Applications: 
+        </h4>
+            <ul>
+              <li>Cold Water Systems;</li>
+              <li>Hot Water Systems.</li>
+            </ul>
+        <h4>Features:</h4>
+            <ul>
+              <li>Water Service Calculations;</li>
+              <li>FU, Continuous and Intermittent Flow Inputting;</li>
+              <li>Automatic Intermittent Flow-FU conversion;</li>
+              <li>Reporting.</li>
+            </ul>
+        <h4>Parameters included:</h4>
+            <ul>
+              <li>WSFU;</li>
+              <li>Continuous Flow;</li>
+              <li>Intermittent Flow;</li>
+              <li>Coordination (Optional);</li>
+              <li>Pipe No., Size, Length:</li>
+              <li>Fittings:</li>
+              <li>Hazen-Williams C;</li>
+              <li>Elevations.</li>
+            </ul>
+        <h4>Water Source Calculation</h4>
+            <p>The water source calculation will be performed after entering the flow testing data. </p>
+            <p>Firstly, the K factor will be calculated based on the data, which were entered. It is an indicator of the
+             piping system water distribution capacity, independing from water flow and pressure.</p>
+            <p>It is well known that the flow test may not be conducted during the most unfavorable time of the day. 
+            Therefore, a safety margin factor SF is introduced to take into account the unpredicted  conditions as well as 
+            the future piping deterioration and development, etc.</p>
+        <p>The flow required, Qr, is get during the calculation process.The pressure available, Pav, at Qr will show 
+        in the table, too. See next table for other abbreviation.</p> 
+                   
+               <img border="0" src="pics/BranchCalc01.jpg" style="width:100%;height:auto;" alt=""/>
+               
+        <h4>Date Input</h4>
+            <p>The following table shows how the system data are entered. Except the Node No. 
+                and Pipe No., which are autimatically generated during the calculation, you 
+                enter the data for Qi, Qc, Elev, L and Fitt (See Abbreviations for meaning) .&nbsp; 
+                Click <a href="FittCode.htm">here</a> for fitting code 
+                list.</p>
+
+               <img border="0" src="pics/BranchCalc02.jpg" style="width:100%;height:auto;" alt=""/>
+
+        <h4>Reporting</h4>
+        <p>Click <a href="Pipe_Code_HWC.htm">here</a> for pipe 
+            code and HWC</p>
+
+               <img border="0" src="pics/BranchCalc03.jpg" style="width:100%;height:auto;" alt=""/>
+    </div>
+    <div id="rightcolumn">
+        <div id="equipMenu">
+        <b>Product Selection</b>             
+	        <form action="gotoLocation.cgi">
+		        <select id="newLocation" onclick="initForm()">
+                    <option>Select a Catagory</option>
+                    <option value="../../Ads/Valves/valveCO.html">Valves</option>
+                    <option value="../../Ads/Sumppump/SumppumpCO.html">Sump Pumps</option>
+                    <option value="../../Ads/Hangers/hangerCO.html">Pipe Supports</option>
+                    <option value="../../Ads/Highpuritywater/HighpuritywaterCO.html">RO/DI System</option>
+                    <option value="../../Ads/Instrument/instrumentCO.html">Instruments</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Water Treatment></option>
+                    <option value="../../Ads/Pipe/pipeCO.html">Piping</option>
+                    <option value="../../Ads/Waterheaters/WaterheaterCO.html">Water Heaters</option>
+                    <option value="../../Ads/Appurt/appurtCO.html">Specialties</option>
+                    <option value="../../Ads/Fixtures/Manufacturer-Fixture.htm">Fixtures</option>
+                    <option value="../../Ads/Waterpump/pumpCO.html">Boost Pumps</option>
+                    <option value="../../Ads/Fixture_medical/medicalfixturesCO.html">Medical Fixtures</option>
+                    <option value="../../Ads/Storagetanks/tankCO.html">Storage Tanks</option>
+                    <option value="../../Ads/Fixture_food/kitchenfixturesCO.html">Kitchen Equipment</option>
+                    <option value="../../Ads/Drainspecialties/DrainspecialtyCO.html">Drainage Specialties</option>
+                    <option value="../../Ads/ES_EW/emergencyfixtureCO.html">Emergency Equipment</option>
+                    <option value="../../Ads/Intercepters/IntercepterCO.html">Interceptors</option>
+                    <option value="../../Ads/Drinkingfountain/drinkingfountainCO.html">Drinking Fountains</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Septic Tanks</option>
+                    <option value="../../Ads/Medicalgases/medgasCO.html">Medical Gases</option>
+                    <option value="../../Ads/Roofdrains/RoofdrainCO.html">Roof Drains</option>
+                    <option value="../../Ads/Insulation/insulationCO.html">Insulation</option>
+                    <option value="../../Ads/Hengkang.htm">Plastics</option>
+                    <option value="../../Ads/Calculator/Ad-TI00.htm">Calculators</option> 
+		        </select>
+
+	        </form>	
+	        <br />	  
+        <b><a target="_blank"href="../../Ads/Manufacturers.htm">Manufacturers</a></b> 
+		
+        </div>    
+    </div>
+    <div id="footer">
+        <hr style="width:100%;color:blue;height:4px" />
+        <ul class="nav">
+  		    <li><a href="../../Reference/Terms.htm" target="main">Terms of Use</a></li>
+  		    <li><a href="../../Reference/Legal.htm" target="main">Legal Issues</a></li>
+  		    <li><a href="../../Reference/Privacy.htm" target="main">Privacy Policy</a></li>  		
+	    </ul>
+          <div align="center">EngineerMate since 2005</div>   
+        <script type="text/javascript" src="http://kit.hichina.com/sitemanager/counter.asp?username=ufe471"></script>     
+    </div>
+    </div>
+</body>
+</html>

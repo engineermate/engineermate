@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Storm Drain</title>
+    <link href="../../StyleSheetSI.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="STSI.js"></script>    
+</head>
+<body>
+    <div id="container">
+    <div id="header">     	
+        <ul class="nav">
+  		    <li><a href="../../Reference/Contact.htm" target="_blank">Contact</a></li>
+  		    <li><a href="../../Reference/Products.htm" runat="server">Products</a></li>
+  		    <li><a href="../../Reference/Services.htm" runat="server">Services</a></li>
+  		    <li><a href="../../Reference/About.htm" target="HTMLPage"onclick="getAbout()">About Us</a></li>
+  		    <li><a id="A1" href="../../indexSI.htm" runat="server">Home</a></li>		  		
+	    </ul>
+        <div><img src="../../headerdesign.jpg" alt="工程师之友" /></div></div>
+    <div id="leftcolumn">
+         <h2>More Reading:</h2>
+         <h3>Rainfall Density in the United States</h3>
+            Refer to plumbing code for rainfall density in different locations in the United States.<br/>
+                <ul>
+                      <li>IPC - <a href="http://www.iccsafe.org/">International Plumbing Code</a></li>
+                      <li>NSPC - <a href="http://www.phccweb.org/">National Standard Plumbing Code</a></li>
+                      <li>UPC - <a href="http://www.iapmo.org/">Uniform Plumbing Code</a></li>
+                 </ul> 
+            Or, website of National Weather Bureau <a href="http://www.nws.noaa.gov/" >(NOAA) </a> 
+        <h3>Roof Area Calculation</h3>
+            <ul>
+                <li>Calculating roof area based on roof plan plus half of the vertical wall area. Refer to governing plumbing code for requirement. Different plumbing code has different explanation.</li> 
+                <li>Refer to "Overcoming Code Challenges: <a href="../../Documents/Library/CalcRoofArea/CalcRoofArea.htm" target="_blank">Calculating Roof Area for Roof Drain Sizing</a>", 
+            <a href="http://www.psdmagazine.com/index.php"> PSD</a>, July 2009 by Anjian Lu.</li>
+            </ul>
+        <h3>Sizing Roof Drains: </h3>
+            <p>More references: J.R. Smith's Technical Data "<a href="http://www.jrsmith.com/assets/documents/literature/roof_drains_tech_data.pdf">HOW TO SELECT A ROOF DRAIN</a>" (Note: link may change).</p> 
+    </div>     
+    <div id="midcolumn">	
+        <h1>Storm Drain Sizing</h1>
+            <div>
+            <form action="">
+                <table width="100%">
+                    <caption>Roof Drains/Leaders</caption>
+                    <colgroup span="1-5" width="10%" style="text-align:center;"></colgroup>
+                    <tr>
+                        <th>Rainfall Rate (mm/hr)</th><th>Area (m<sup>2</sup>)</th><th>Flow (L/s)</th><th>Pipe Capacity (m<sup>2</sup>)</th>
+                        <th>Drain Dia (mm)</th><th>Safety Margin (%)</th>
+                    </tr>
+                    <tr style="text-align:center;">
+                        <td><input type="text" id="mmhrl" value="25.4" onkeyup="stormflowl(mmhrl.value,sqml.value)" /></td>
+                        <td><input type="text" id="sqml" value="100" onkeyup="stormflowl(mmhrl.value,sqml.value)" /></td>            
+                        <td id="flowl"></td>
+                        <td><select id="leaders" onchange="getLeaderDn()">
+                        </select>
+                        </td>
+                        <td id="Dnl"></td>  
+                        <td id="margl"></td>                                                           
+                    </tr>
+                </table>              
+                <table width="100%">
+                    <caption>Horizontal Piping</caption>                
+                    <colgroup span="1-3" width="10%"><col /><col /><col /><col width ="30%" /></colgroup>
+                    <tr>
+                        <th>Rainfall Rate (mm/hr)</th><th>Area (m<sup>2</sup>)</th><th>Flow (L/s)</th><th>Slope(%)</th><th>Pipe Capacity (m<sup>2</sup>)</th>
+                        <th>Drain Dia (mm)</th><th>Safety Margin (%)</th>
+                    </tr>
+                    <tr style="text-align:center;">
+                      <td><input type="text" id="mmhr" value="25.4" onkeyup="stormflow(mmhr.value,sqmh.value)" /></td> 
+                        <td><input type="text" id="sqmh" value="100" onkeyup="stormflow(mmhr.value,sqmh.value)" /></td>            
+                        <td id="flow"></td>            
+                        <td style="text-align:left;">  
+                           <select id="slopes" onchange="populateAreas()">
+                           </select>
+                        </td> 
+                        <td><select id="m2s" onchange="getDn()">
+                        </select>
+                        </td>
+                        <td id="Dn"></td>  
+                        <td id="marg"></td>                                                          
+                    </tr>
+                </table>                                 
+            </form>
+            <p><b>Warning! </b>
+               Different plumbing code has different maximum roof area for a particular roof drain and/or pipe size. 
+               Be sure to check the plumbing code enforced in your project area.
+            </p>
+            </div>            
+        <h3>How to Use:</h3>        
+            <ul>
+                <li><b><u>For Roof Drains or Leaders:</u></b> 1) Enter rain density. 2) Enter roof 
+                    area. The actual flow will be shown in 2nd column. 3) In the 
+                    dropdown menu, select pipe capacity expressed as roof area, which is the maximum 
+                    roof area a pipe can handle and it should be equal to or larger than the actual 
+                    roof area. 4) The corresponding pipe diameter will be shown on the right. 5) The 
+                    safety margin are also shown in the last column.</li>                            
+                <li><b><u>For Horizontal Piping:</u></b> 1) Enter rain density. 2) Enter roof area. 
+                    3) In the 
+                    Slope dropdown menu, select design slope. 4) In the Pipe Capacity dropdown menu, select area, which 
+                    is the maximum roof area a pipe can handle and it should be equal to or larger 
+                    than the actual roof area. 5) The corresponding pipe diameter will be shown on 
+                    the right. 6) The safety margin are also shown in the last column.</li>
+               <li><b><u>Example: </u></b>Click <a target="_blank" href="ST-example.htm">here</a> to see the example.</li>     
+                <li>* Cuation! Some plumbing codes may not allow using 1/16 inch per foot (or 0.52%) slope. Also, velocity may be too slow in an oversized pipe.</li>
+            </ul>            
+        <h3>PlumAL can do more:</h3>
+            <ul>                          
+                <li>Calculating roof drain and drain piping and check its capacity on spread sheets using UDF.</li>
+                <li>Drawing <a href="../../Hydraulics/Profile/pics/Profile-CenterLine.jpg">profiles </a>with on-screen adjusting feature.</li>
+                <li>Recording and reporting results into the calculation book for submission.</li>         
+            </ul>
+         <div style="text-align:right;"><a href="../../indexSI.htm">Return to Main Menu</a></div> 
+    </div>    
+    <div id="rightcolumn">
+        <div id="equipMenu">
+        <b>Product Selection</b>             
+	        <form action="gotoLocation.cgi">
+		        <select id="newLocation" onclick="initForm()">
+                    <option>Select a Catagory</option>
+                    <option value="../../Ads/Valves/valveCO.html">Valves</option>
+                    <option value="../../Ads/Sumppump/SumppumpCO.html">Sump Pumps</option>
+                    <option value="../../Ads/Hangers/hangerCO.html">Pipe Supports</option>
+                    <option value="../../Ads/Highpuritywater/HighpuritywaterCO.html">RO/DI System</option>
+                    <option value="../../Ads/Instrument/instrumentCO.html">Instruments</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Water Treatment></option>
+                    <option value="../../Ads/Pipe/pipeCO.html">Piping</option>
+                    <option value="../../Ads/Waterheaters/WaterheaterCO.html">Water Heaters</option>
+                    <option value="../../Ads/Appurt/appurtCO.html">Specialties</option>
+                    <option value="../../Ads/Fixtures/Manufacturer-Fixture.htm">Fixtures</option>
+                    <option value="../../Ads/Waterpump/pumpCO.html">Boost Pumps</option>
+                    <option value="../../Ads/Fixture_medical/medicalfixturesCO.html">Medical Fixtures</option>
+                    <option value="../../Ads/Storagetanks/tankCO.html">Storage Tanks</option>
+                    <option value="../../Ads/Fixture_food/kitchenfixturesCO.html">Kitchen Equipment</option>
+                    <option value="../../Ads/Drainspecialties/DrainspecialtyCO.html">Drainage Specialties</option>
+                    <option value="../../Ads/ES_EW/emergencyfixtureCO.html">Emergency Equipment</option>
+                    <option value="../../Ads/Intercepters/IntercepterCO.html">Interceptors</option>
+                    <option value="../../Ads/Drinkingfountain/drinkingfountainCO.html">Drinking Fountains</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Septic Tanks</option>
+                    <option value="../../Ads/Medicalgases/medgasCO.html">Medical Gases</option>
+                    <option value="../../Ads/Roofdrains/RoofdrainCO.html">Roof Drains</option>
+                    <option value="../../Ads/Insulation/insulationCO.html">Insulation</option>
+                    <option value="../../Ads/Hengkang.htm">Plastics</option>
+                    <option value="../../Ads/Calculator/Ad-TI00.htm">Calculators</option> 
+		        </select>
+
+
+	        </form>	
+	        <br />	  
+        <b><a target="_blank"href="../../Ads/Manufacturers.htm">Manufacturers</a></b> 
+		
+        </div>    
+    </div>
+    <div id="footer">
+        <hr style="width:100%;color:blue;height:4px" />
+        <ul class="nav">
+  		    <li><a href="../../Reference/Terms.htm" target="main">Terms of Use</a></li>
+  		    <li><a href="../../Reference/Legal.htm" target="main">Legal Issues</a></li>
+  		    <li><a href="../../Reference/Privacy.htm" target="main">Privacy Policy</a></li>	  		
+	    </ul>
+          <div align="center">EngineerMate since 2005</div>   
+        <script type="text/javascript" src="http://kit.hichina.com/sitemanager/counter.asp?username=ufe471"></script>     
+    </div>
+    </div>
+</body>
+</html>

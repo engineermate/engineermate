@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Pipe Data</title>
+	<script type="text/javascript" src="pipedataSI.js"></script>
+    <link href="../../StyleSheetSI.css" rel="stylesheet" type="text/css" />
+
+    </head>
+<body>
+    <div id="container">
+        <ul class="nav">
+  		    <li><a href="../../Reference/Contact.htm" target="_blank">Contact</a></li>
+  		    <li><a href="../../Reference/Products.htm"  target="main">Products</a></li>
+  		    <li><a href="../../Reference/Services.htm"  target="main">Services</a></li>
+  		    <li><a href="../../Reference/About.htm"  target="main">About Us</a></li>
+  		    <li><a id="A1" href="../../indexSI.htm"  target="main">Home</a></li>		  		
+	    </ul>
+        <div><img src="../../headerdesign.jpg" alt="工程师之友" /></div>
+    <div id="leftcolumn">
+        <h2>Applications:</h2>  
+        <p>Equivalent length method is widely used in water supply and other engineering calculations. The minor losses of pipe fittings, appurtenances 
+        and valves can be converted to friction loss over an "equivalent length", and thus simplifies the calculation procedure.</p>
+        <p>However, there are limitations. For example, most backflow preventers, including reduced pressure zone type and double check type, 
+            do not follow 
+        the exponential rule as Hazen-Williams formula expressed. You may consult the 
+            Resistance coefficients of pipe fittings issued by Hydraulic Institute, and/or manufacturer's product specifications.</p>    
+    </div> 
+    <div id="midcolumn">
+    <h1>Pipe Data</h1>
+    <h2>Inner Diameters & Equivalent Lengths</h2>
+	    <form action="">	
+	    <table width="100%">
+	        <caption>Inner Diameters (mm) & Equivalent Lengths (m)</caption>
+	        <colgroup width ="20% 10% 7%" ></colgroup>
+	        <tr><th>Select Pipe</th><th>Select Dn</th><th>Di</th><th><abbr title="Elbow">E</abbr></th><th><abbr title="45EL">F</abbr></th><th><abbr title="T-turn">T</abbr></th><th><abbr title="T-line">R</abbr></th><th><abbr title="Check Valve">CV</abbr></th><th><abbr title="Angle Valve">AV</abbr></th><th><abbr title="Ball Valve">BV</abbr></th><th><abbr title="Gate Valve">GV</abbr></th></tr>
+            <tr>
+                <td>
+                    <select id="pipes" onclick="populateMenu()")>
+                        <script type="text/javascript">
+                            xmlDoc = loadXMLDoc("xml/pipedata.xml");                                   //load units.xml
+                            x1 = xmlDoc.getElementsByTagName("pipe");                       //get all category names
+
+                            for (j = 0; j < x1.length; j++) {
+                                var idval = x1[j].getAttribute("name");                         //assign category name to x1                               
+                                document.write("<option>" + idval + "</option>");               //write option menu
+                                document.write("<br />"); 
+                            }
+                            //alert(getSelectedName());
+                        </script>                     
+                    </select>
+                </td> 
+                <td>
+                    <select id="Dns"onchange="showData()">
+                    
+                    </select>
+	            </td>                     	                                    
+                <td id="Di"></td><td id="E"></td><td id="F"></td><td id="T"></td><td id="R"></td><td id="C"></td><td id="A"></td><td id="B"></td><td id="G"></td>                                           
+            </tr>
+            </table>  
+        </form>
+        <h3>How to Use: </h3>
+        <ul>
+            <li>Select a pipe schedule/material in the first dropdown menu.</li>
+            <li>Select a nominal diameter, Dn, (<b>in inch</b>) in the second dropdown menu.</li>
+            <li>The inner diameter and the equivalent length of fittings and valves for that 
+                size will be shown under each header. </li>
+            <li>Note: The data shown are for reference only. The inner diameter may be different 
+                from the official pipe schedules. The equivalent lengths may vary even more from 
+                source to source. If the accuracy is your main concern, you should consult 
+                official standards or manufacturer&#39;s product data.</li>
+        </ul>
+        <div style="text-align:right;"><a href="../../indexSI.htm">Return to Main Menu</a></div> 
+    </div>  
+    <div id="rightcolumn">
+        <div id="equipMenu">
+        <b>Product Selection</b>             
+	        <form action="gotoLocation.cgi">
+		        <select id="newLocation" onclick="initForm()">
+                    <option>Select a Catagory</option>
+                    <option value="../../Ads/Valves/valveCO.html">Valves</option>
+                    <option value="../../Ads/Sumppump/SumppumpCO.html">Sump Pumps</option>
+                    <option value="../../Ads/Hangers/hangerCO.html">Pipe Supports</option>
+                    <option value="../../Ads/Highpuritywater/HighpuritywaterCO.html">RO/DI System</option>
+                    <option value="../../Ads/Instrument/instrumentCO.html">Instruments</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Water Treatment></option>
+                    <option value="../../Ads/Pipe/pipeCO.html">Piping</option>
+                    <option value="../../Ads/Waterheaters/WaterheaterCO.html">Water Heaters</option>
+                    <option value="../../Ads/Appurt/appurtCO.html">Specialties</option>
+                    <option value="../../Ads/Fixtures/Manufacturer-Fixture.htm">Fixtures</option>
+                    <option value="../../Ads/Waterpump/pumpCO.html">Boost Pumps</option>
+                    <option value="../../Ads/Fixture_medical/medicalfixturesCO.html">Medical Fixtures</option>
+                    <option value="../../Ads/Storagetanks/tankCO.html">Storage Tanks</option>
+                    <option value="../../Ads/Fixture_food/kitchenfixturesCO.html">Kitchen Equipment</option>
+                    <option value="../../Ads/Drainspecialties/DrainspecialtyCO.html">Drainage Specialties</option>
+                    <option value="../../Ads/ES_EW/emergencyfixtureCO.html">Emergency Equipment</option>
+                    <option value="../../Ads/Intercepters/IntercepterCO.html">Interceptors</option>
+                    <option value="../../Ads/Drinkingfountain/drinkingfountainCO.html">Drinking Fountains</option>
+                    <option value="../../Ads/Septictanks/SeptictankCO.html">Septic Tanks</option>
+                    <option value="../../Ads/Medicalgases/medgasCO.html">Medical Gases</option>
+                    <option value="../../Ads/Roofdrains/RoofdrainCO.html">Roof Drains</option>
+                    <option value="../../Ads/Insulation/insulationCO.html">Insulation</option>
+                    <option value="../../Ads/Hengkang.htm">Plastics</option>
+                    <option value="../../Ads/Calculator/Ad-TI00.htm">Calculators</option> 
+		        </select>
+
+	        </form>	
+	        <br />	  
+        <b><a target="_blank"href="../../Ads/Manufacturers.htm">Manufacturers</a></b> 
+		
+        </div>    
+    </div>
+    <div id="footer">
+        <hr style="width:100%;color:blue;height:4px" />
+        <ul class="nav">
+  		    <li><a href="../../Reference/Terms.htm" target="main">Terms of Use</a></li>
+  		    <li><a href="../../Reference/Legal.htm" target="main">Legal Issues</a></li>
+  		    <li><a href="../../Reference/Privacy.htm" target="main">Privacy Policy</a></li>  		
+	    </ul>
+          <div align="center">EngineerMate since 2005</div>   
+        <script type="text/javascript" src="http://kit.hichina.com/sitemanager/counter.asp?username=ufe471"></script>    
+    </div>
+    </div>
+</body>
+</html>

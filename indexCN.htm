@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>工程师之友 engineermate</title>
+    <link rel="stylesheet" href="StyleSheetCN.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta name="description" 
+    content="向读者和用户介绍和推荐优秀的计算机软件,促进工程设计与计算的科学化、系统化、精确化,减轻劳动强度、提高工作效率,从而提高工程质量和增加公司收益。" />
+    <meta name="keywords" content="工程师之友,美国,给水排水,建筑给水排水,国际建筑给水排水,规范,IPC,给水排水规范,UPC,标准建筑给水排水规范,NSPC,PHCC,给水排水系统,设计,PSD,PM,工程师,建筑给水排水工程师,Plumbing Engineer,世界建筑给水排水一览,WPR,CPD,生活热水,美国建筑给水排水设计,热水循环系统,计算机辅助设计,建筑给水排水工程,Excel的函数,满宁公式,Excel,卫生器具,当量与流量,计算器,用户菜单中,建筑给水排水常用名词,美国有关机构,设备,
+    程序的编制,工程经济学,工作界面,合同规定,计算方法,计算机软件,美国建筑给水排水设计,软件的应用,设计文件,手工计算,水力学,图表曲线,原始数据,中英文名词对照,桌面技术,阀门,排水泵,支架吊架,高纯水系统,仪表与控制,中水系统,管道管件,加热器,管道配件,卫生器具,给水泵,医疗卫生器具,储水箱,厨房卫生器具,排水管道配件,事故卫生器具,截留与分离器,饮水器,化粪池与污水处理,医疗气体系统,雨水斗,保温材料,塑胶电器,计算工具,
+    阀门,排水泵,支架吊架,高纯水系统,仪表与控制,中水系统,管道管件,加热器,管道配件,卫生器具,给水泵,医疗卫生器具,储水箱,厨房卫生器具,排水管道配件,事故卫生器具,截留与分离器,饮水器,化粪池与污水处理,医疗气体系统,雨水斗,保温材料,塑胶电器,计算工具,北京市医院污水污物处理协会,生物安全分级,生物安全分级与设计要求,生物安全规定的网站,地漏,水封,室内空气质量,热水循环系统,计算机辅助计算,水流试验,管网的给水能力,虹吸,压力流,雨水系统,绿色建筑,LEED,ADA,Roof Area Calculations" />	
+	<script type="text/javascript" src="menu.js"></script>
+</head>
+
+<body>
+<div id="container"> 
+    <div id="header" style="height:135px;">
+     	<ul class="nav" style="font-size:1.1em;">
+            <li><a href="Leisure/LeisureIndex.htm">休闲保健</a> </li>     	
+  		    <li><a href="Reference/ContactCN.htm" target="_blank">联系我们</a></li>
+  		    <li><a href="Reference/ProductsCN.htm" target="_blank">产品</a></li>
+  		    <li><a href="Reference/ServicesCN.htm" target="_blank">服务</a></li>
+  		    <li><a href="Reference/AboutCN.htm" target="_blank"">关于我们</a></li>
+  		    <li><a id="A1" href="index.htm" runat="server">首页</a></li>		  		
+	    </ul>
+          <div><img src="headerdesign.jpg" alt="工程师之友" /></div>
+        <div style="text-align:center;padding-top:0;margin-top:0;" id="gCalc">            
+	            <form style="text-align:center;padding-top:5px;margin-bottom:5px;"  action="">
+		            <select style="width:130px;" id="LocationA" onclick="initFormGC()">
+                        <option>一般计算</option>
+                        <option value="GeneralCalc/Units/unitsCN.html">-- 单位换算</option>
+                        <option value="GeneralCalc/AreaVolume/areavolumeCN.htm">-- 面积和体积</option> 
+                        <option value="GeneralCalc/GeneralHydraulics/GeneralHydraulicsCN.htm">-- 一般水力计算</option>
+                        <option value="GeneralCalc/PipeData/pipedataCN.html">-- 管径与当量长度</option> 
+                     </select>
+		            <select style="width:130px;" id="LocationB" onclick="initFormWS()">
+                        <option>给水</option>		            
+      	                <option value="Plumbing/FU_Q/FU_QCN.htm">-- 当量与流量</option> 
+      	                <option value="Plumbing/HW/ModifiedHunterCurveCN.htm">-- 快速加热器</option>
+      	                <option value="Hydraulics/SimplePipeLine/SimplePipelineCN.htm">-- 简单管路计算</option>
+      	                <option value="Hydraulics/FlowTest/FlowTestCN.htm">-- 流量试验</option> 
+      	                <option value="Plumbing/HW/HWPowerCN.htm">-- 热水能耗</option> 
+      	                <option value="Plumbing/HW/HWmixingCN.htm">-- 热水混合</option>
+      	                <option value="Plumbing/HW/HWRCN.htm">-- 热水循环</option>      	                	
+                     </select> 
+		            <select style="width:130px;" id="LocationC" onclick="initFormST()">
+                        <option>雨水排水</option>
+                        <option value="Plumbing/ST/STCN.htm">-- 雨水管道计算</option>
+                     </select> 
+		            <select style="width:130px;" id="LocationD" onclick="initFormWW()">
+                        <option>污水</option>		            
+      	                <option value="Plumbing/Drain/DrainCN.htm">-- 排水管计算</option>	
+      	                <option value="Plumbing/Vent/VentCN.htm">-- 通气管和水泵通气管</option> 
+      	                <option value="Hydraulics/Profile/ProfileCN.htm">-- 纵剖面</option>
+      	                <option value="Hydraulics/GravityPiping/GravityPipingCN.htm">-- 重力流计算</option>  
+                     </select>                      
+		            <select style="width:130px;" id="LocationE" onclick="initFormLB()">
+                        <option>资料中心</option>		            
+      	                <option value="Documents/Library//Organizations.htm">-- 机构</option>
+      	                <option value="Ads/Manufacturers.htm">-- 生产厂</option>
+      	                <option value="Documents/Library//Dictionaries.htm">-- 技术术语</option>
+      	                <option value="Documents/Library//Term-plbg-EnCn.htm" >-- 英中给水排水术语</option>
+      	                <option value="Documents/Library//Term-pump-EnCn.htm" >-- 英中水泵术语</option>      	                
+      	                <option value="Documents/Library//ArticleindexCN.htm"  >-- 技术论文</option>	  
+                     </select> 
+		            <!--<select style="width:90px;" id="LocationF" onclick="initFormNS()">
+                        <option>News</option>		            
+      	                <option value="news/newsindex.htm">-- News Index</option>
+                     </select>   -->
+		            <select style="width:100px;" id="LocationG" onclick="initFormCN()">
+                        <option>英文</option>		            
+      	                <option value="indexEN.htm">-- 美制</option>
+      	                <option value="indexSI.htm">-- SI制</option>	  
+                     </select>                                                                                                       
+                </form>
+         </div>          	                   
+    </div>
+
+    <div id="leftcolumn">
+        <!--<div id="search">
+            <form action="#">
+                <label>搜索</label>
+                <input name="searchFor" type="text" size="10" />
+                <input name="goButton" type="submit" value="go" />
+            </form>
+        </div> --> 
+        <form action="#">    
+        <div id="menuEN">
+	        <h3>美国建筑给水排水介绍</h3>
+            <div>
+            <a href="menu1.html"  class="menuLink">主要规范：</a>
+                <ul class="menu" id="menu1">
+	                <li> <a target="_top" href="http://www.iccsafe.org/e/category.html">国际建筑给水排水规范 (IPC)</a></li>
+	                <li><a target="_blank" href="http://www.iapmostore.org/">统一建筑给水排水规范 (UPC)</a></li>
+	                <li><a target="_blank" href="http://www.nfpa.org/aboutthecodes/list_of_codes_and_standards.asp?cookie%5Ftest=1">NFPA消防规范目录</a></li>	                	        
+      	        </ul>
+            </div>
+           <div>
+            <a href="menu2.html"  class="menuLink">主要杂志：</a>
+                <ul class="menu" id="menu2">
+                    <li><a target="_blank" href="http://www.psdmagazine.com/">建筑给水排水系统和设计(PSD)</a></li>
+                    <li><a target="_blank" href="http://www.bnpmedia.com/Articles/Publications/Plumbing/">PM 工程师</a></li>
+                    <li><a target="_blank" href="http://digital.bnpmedia.com/publication/?i=42100">PME(digital)</a></li>
+                    <li><a target="_blank" href="http://twitter.com/pmengineer">PME(twitter)</a></li>
+                    <li><a target="_blank" href="http://www.facebook.com/PMEngineer">PME(facebook)</a></li>
+                    <li><a target="_blank" href="http://www.plumbingengineer.com/" >建筑给水排水工程师(Plumbing Engineer)</a></li>
+                    <li><a target="_blank" href="http://www.wpr.com.au/" >世界建筑给水排水一览 (WPR)</a></li>
+                    <li><a target="_blank" href="http://www.nfpa.org/journalPortal.asp?categoryID=1337" >NFPA期刊</a></li>                    
+      	        </ul>
+            </div>  
+           <div>                      
+            <a href="menu3.html"  class="menuLink">有关书籍：</a>
+                <ul class="menu" id="menu3">
+                    <li><a target="_blank" href="https://aspe.org/xcart?productid=177">建筑给水排水规范设计手册（图解）</a></li>                    
+                    <li><a target="_blank" href="https://aspe.org/xcart?productid=177">建筑给水排水设计 II</a></li>
+                    <li><a target="_blank" href="https://aspe.org/xcart?productid=177">CPD 考试辅导 - 2011</a></li> 
+                    <li><a target="_blank" href="http://aspe.org/xcart/product.php?productid=177">更多ASPE出版物</a></li>                              
+                    <li><a target="_blank" href="Documents/EngineerMateCN/PSDUSA.htm" >美国建筑给水排水设计（中文）</a></li>
+      	        </ul>
+            </div>              
+           <div>                      
+            <a href="menu4.html"  class="menuLink">文章阅读：</a>
+                <ul class="menu" id="menu4">
+                    <li><a href="Documents/Library/ASPE_HWR.pdf">《热水循环系统的计算机辅助设计》</a></li>     
+                    <li><a href="Documents/Library/ASPE_function.pdf">《在建筑给水排水工程中使用Excel的函数》</a></li>   
+                    <li><a href="Documents/Library/ASPE_Userform_Calculator.pdf">《自己动手创建卫生器具当量与流量计算器》</a></li>                
+                    <li><a href="Documents/Library/ASPE_Menu_Bar.pdf">《怎样将你自己创建的程序组织在Excel的用户菜单中》</a></li>                  
+                    <li><a href="English_Lerning/L14/Lesson14.htm">《雨水系统屋面面积计算》(重新编排成中英对照html格式)</a></li>  
+      	        </ul>
+            </div>          
+           <div>                      
+            <a href="menu5.html"  class="menuLink">信息查询：</a>
+                <ul class="menu" id="menu5">
+                <li><a  target="_blank"href="Documents/Library/Term-plbg-EnCn.htm">英汉对照建筑给水排水常用名词</a></li>
+                <li><a  target="_blank"href="Documents/Library/Organizations.htm">美国有关机构</a></li>
+                <li><a  target="_blank"href="Ads/Fixtures/Manufacturer-Fixture.htm">建筑给水排水设备和卫生器具生产厂</a></li>
+                <li><a  target="_blank"href="Ads/Manufacturers.htm">更多厂家。。。</a></li> 
+      	        </ul>
+            </div> 
+           <div>              
+            <a href="menu6.html"  class="menuLink">美国生物污水处理：</a>
+                <ul class="menu" id="menu6">
+                <li><a target="_blank" href="Documents/Biosafety/Biosafety.htm">生物污水处置介绍</a></li>              
+                <li><a target="_blank" href="Documents/Biosafety/BSLclassification.htm">美国生物安全分级</a></li>
+                <li><a target="_blank" href="Documents/Biosafety/NIH_DP&D_plbg_BSL3&4.htm">美国生物安全分级与设计要求</a></li>
+      	        </ul>
+            </div>               
+         </div>   
+         </form>   
+        <div class="textbox" style="background-color:#FFFACD">
+        <h3>通知：</h3>            
+         <p>这是《工程师之友》中文测试版，还在不断改进中。请将您的宝贵意见通过<br /><a href="info@engineermate.com">info@engineermate.com</a><br />寄给我们。谢谢！</p>
+        </div> 
+          <div class="textbox">
+          <strong>
+            网友论坛
+          </strong>            
+             <p>请将您愿意发表供网友们共享的有关建筑给水排水方面的见解通过本站“在线留言”上传给我们。我们将选择大家普遍关心的题目供大家阅读和参加讨论，以便将《工程师之友》办得更好。谢谢！ </p>
+        </div>                                   
+    </div>
+    <div id="midcolumn">
+        <center><h2>有关本网站：</h2></center>	
+        <ul style="font-size:1.1em;line-height:1.5em;">
+        <li><a href="Introduction2em.htm#交流的平台">中美工程师们交流的平台</a></li>
+      
+        <li><a href="Introduction2em.htm#时代的硕果">让我们共享计算机时代的硕果</a></li>                    
+
+        <li><a href="Introduction2em.htm#宗旨和内容">本站的宗旨和内容</a></li>           
+
+        <li><a href="Introduction2em.htm#美国建筑给水排水设计">介绍美国建筑给水排水的书：《美国建筑给水排水设计》</a></li>
+        </ul>
+            <center><h2>学习园地——建筑给水排水英语</h2>                
+
+                <a href="English_Lerning/L00/Introduction.htm">击此进入目录</a></center> 
+
+        <div class="textbox">
+                <center><h2>美国及世界给水排水新闻</h2>
+                <a href="news/newsindex.htm">击此进入目录</a></center>         
+            <p><strong>编者按：</strong>本栏目转载美国建筑给水排水学会（ASPE)的新闻报道《PipeLine》以及其他来源并翻译成中文供读者查阅原文之用，
+            以方便同行的工程技术和研究人员了解美国的给水排水技术动态，有助于研究节水节能技术，对合理利用水资源、保护我们整个地球的环境做出贡献。</p>
+            <p>由于本人业余时间紧张，有些条目可能先译出标题，待有时间了陆续补上。</p>
+            <p>如您对翻译的错漏之处不吝指教或对内容有任何建议，请在《在线留言》栏中提出。谢谢！</p>
+        </div> 
+    </div> 
+    <!--<div id="">
+        <div>
+            <table class="style1">
+                
+              
+            </table>
+        </div>  -->
+
+    <div id="rightcolumn" style="float:right;">
+        <div id="equipMenu">
+        <b>选用产品：</b>             
+	        <form action="gotoLocation.cgi">
+		        <select id="newLocation" onclick="initForm()">
+                    <option>选择设备类别：</option>
+                    <option value="Ads/Valves/valveCO.html">阀门</option>
+                    <option value="Ads/Sumppump/SumppumpCO.html">排水泵</option>
+                    <option value="Ads/Hangers/hangerCO.html">支架吊架</option>
+                    <option value="Ads/Highpuritywater/HighpuritywaterCO.html">高纯水系统</option>
+                    <option value="Ads/Instrument/instrumentCO.html">仪表与控制</option>
+                    <option value="Ads/Septictanks/SeptictankCO.html">中水系统<</option>
+                    <option value="Ads/Pipe/pipeCO.html">管道管件</option>
+                    <option value="Ads/Waterheaters/WaterheaterCO.html">加热器</option>
+                    <option value="Ads/Appurt/appurtCO.html">管道配件</option>
+                    <option value="Ads/Fixtures/Manufacturer-Fixture.htm">卫生器具</option>
+                    <option value="Ads/Waterpump/pumpCO.html">给水泵</option>
+                    <option value="Ads/Fixture_medical/medicalfixturesCO.html">医疗卫生器具</option>
+                    <option value="Ads/Storagetanks/tankCO.html">储水箱</option>
+                    <option value="Ads/Fixture_food/kitchenfixturesCO.html">厨房卫生器具</option>
+                    <option value="Ads/Drainspecialties/DrainspecialtyCO.html">排水管道配件</option>
+                    <option value="Ads/ES_EW/emergencyfixtureCO.html">事故卫生器具</option>
+                    <option value="Ads/Intercepters/IntercepterCO.html">截留与分离器</option>
+                    <option value="Ads/Drinkingfountain/drinkingfountainCO.html">饮水器</option>
+                    <option value="Ads/Septictanks/SeptictankCO.html">化粪池与污水处理</option>
+                    <option value="Ads/Medicalgases/medgasCO.html">医疗气体系统</option>
+                    <option value="Ads/Roofdrains/RoofdrainCO.html">雨水斗</option>
+                    <option value="Ads/Insulation/insulationCO.html">保温材料</option>
+                    <option value="Ads/Hengkang.htm">塑胶电器</option>
+                    <option value="Ads/Calculator/Ad-TI00.htm">计算工具</option> 
+		        </select>
+	        </form>	
+        </div> 
+      <div>
+        <strong>
+          热门话题 
+        </strong>
+            <ul> 
+                    <li><a href="Discussion/01_DrainCapacity/DrainCapacityCN.htm">地漏可以排多少水？</a></li>
+                    <li><a href="Discussion/Vent_Trap.htm">读者来信-通气管与水封</a></li>
+                    <li><a href="Discussion/alsoCFP.htm">也谈《碳足迹》</a></li>             
+                    <li><a href="Discussion/UnitDelema.htm">单位换算的尴尬</a></li>             
+                    <li><a href="Discussion/14futureCities.htm">未来派绿色建筑</a></li>
+                    <li><a href="Discussion/Roofarea.htm">雨水系统屋面面积计算</a></li>                
+                    <li><a href="Discussion/Q&A.htm">问答——有关美国建筑给水排水的几个问题</a></li>
+                    <li><a href="Discussion/CarbonFP.htm">碳足迹国际论坛（新闻报道）</a></li>
+                    <li><a href="Discussion/syphonicRD.htm">虹吸/压力流雨水系统有新意吗？</a></li>
+                    <li><a href="Discussion/SystemCapacity.htm">水流试验与水源供水能力计算</a></li>  
+                    <li>（<a target="_blank" href="Discussion/DiscussionIndex.htm">更多...</a>）</li>                      
+            </ul>    
+      </div>            
+        
+    </div>       
+    <div id="footer">
+        <hr style="width:100%;color:blue;height:4px;" />
+        <ul class="nav" style="font-size:1.2em;">
+  		    <li><a href="Reference/Terms.htm" target="_blank">T使用条件</a></li>
+  		    <li><a href="Reference/Legal.htm" target="_blank">法律问题</a></li>
+  		    <li><a href="Reference/Privacy.htm" target="_blank">隐私</a></li>	  		
+	    </ul>
+          <div align="center">EngineerMate Since 2005</div>   
+          
+        <script type="text/javascript" src="http://kit.hichina.com/sitemanager/counter.asp?username=ufe471"></script> 
+    </div>
+         
+    </div> 
+</body>
+</html>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="pipecode.xsl"?>
+<root>
+  <slope  sp="select slope">
+    <size inch="">0</size>  
+  </slope>  
+  <slope  sp="1/16 (0.52%)*">
+    <size inch="2">0</size>
+    <size inch="3">0</size>
+    <size inch="4">0</size>
+    <size inch="5">1925</size>
+    <size inch="6">3080</size>
+    <size inch="8">6545</size>
+    <size inch="10">11935</size>
+    <size inch="12">19250</size>
+  </slope>
+  <slope  sp="1/8 (1.04%)">
+    <size inch="2">na</size>
+    <size inch="3">657</size>    
+    <size inch="4">1504</size>
+    <size inch="5">2672</size>
+    <size inch="6">4280</size>
+    <size inch="8">9200</size>
+    <size inch="10">16580</size>
+    <size inch="12">26650</size>
+    <size inch="15">47600</size>
+    
+  </slope>
+  <slope  sp="1/4 (2.08%)">
+    <size inch="2">327</size>    
+    <size inch="3">928</size>
+    <size inch="4">2120</size>
+    <size inch="5">3776</size>
+    <size inch="6">6040</size>
+    <size inch="8">13040</size>
+    <size inch="10">23350</size>
+    <size inch="12">37600</size>
+    <size inch="15">67250</size>
+    
+  </slope>
+  <slope  sp="1/2 (4.16%)">
+    <size inch="2">462</size>
+    <size inch="3">1310</size>
+    <size inch="4">3010</size>
+    <size inch="5">5320</size>
+    <size inch="6">8580</size>
+    <size inch="8">18400</size>
+    <size inch="10">33150</size>
+    <size inch="12">53200</size>
+    <size inch="15">95200</size>    
+  </slope>
+
+</root>
